@@ -1,0 +1,717 @@
+* {
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style: none;
+}
+div {
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: relative;
+    overflow-x:hidden;
+}
+
+.totalWrap {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+/* 1. 맨위 사진 부분 */
+.top {
+    height: 360px;
+}
+.top_container {
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    background-image: url(./img_top/top_img.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.time {
+    margin-left: 35px;
+    font-family: SFProText;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: -0.6px;
+    text-align: center;
+    color: #fff;
+}
+.top_picon {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.connection {
+    background-color: #fff;
+    width:16px;
+    height: 10px;
+    margin-left: auto;
+}
+.wifi{
+    background-color: #fff;
+    width:15px;
+    height: 11px;
+    margin-left: 10px;
+}
+.battery {
+    background-color: #fff;
+    width: 18px;
+    height: 7px;
+    margin-left: 10px;
+}
+.top_icon {
+    display: flex;
+    justify-content: flex-end;
+    height: 52px;
+}
+
+.top_icon img {
+    width:40px;
+    height:40px;
+    object-fit: contain;
+}
+
+div.ico_alarm {
+    position:relative;
+    background-image: url(./img_top/ico_alarm.png);
+    background-size: cover;
+    width:40px;
+    height:40px;
+}
+.ico_alarm img{
+    position:absolute;
+    right:4px;
+    width:8px;
+    height:8px;
+}
+
+.top_info {
+    margin-top: auto;
+    height: 150px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 67%, #fff);
+}
+
+img.bdg_special {
+    width: 63px;
+    height: 18px;
+    margin-left: 16px;
+    object-fit: contain;
+}
+.top_info_title {
+    margin-left: 16px;
+}
+.-DJ- {
+  height: 118px;
+  margin-right: 16px;
+  font-family: SUIT;
+  font-size: 24px;
+  font-weight: 550;
+  line-height: 1.21;
+  letter-spacing: -1.44px;
+  text-align: left;
+  color: #202020;
+}
+.top_info_name{
+    margin-left: 16px;
+}
+.info_name {
+    height: 40px;
+    opacity: 0.7;
+    font-family: SUIT;
+    font-size: 15px;
+    line-height: 1.27;
+    letter-spacing: -0.9px;
+    text-align: left;
+    color: #202020;
+  }
+
+
+/* 2. 스토리같은 곳 */
+.story {
+    margin-top: 8px;
+}
+
+.story_container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.story_back1{
+    background-image: url(./img_story/background.png);
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+    padding: 2px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ff3c7b, #ff8565);
+}
+.story_back2{
+    background-image: url(./img_story/background2.png);
+    width: 75px;
+    height: 75px;
+    padding: 2px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #fff;
+    display:flex;
+    
+}
+.story_name_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+.story_name {
+    font-family: SUIT;
+    font-size: 10px;
+    line-height: 1.25;
+    text-align: center;
+    color: #303030;
+}
+
+/* 3. 일간랭킹 */
+.rank {
+    margin-top: 24px;
+}
+.rank_container {
+    width: 100%;
+    height: 250px;
+    margin-left: 16px;
+}
+.rank_banner {
+    display:flex;
+    align-items: center;
+    width: 100%;
+    height: 26px;
+}
+.-TOP-10 {
+    line-height:26px;
+    margin: 0 2px 0 0;
+    font-family: SUIT;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    text-align: left;
+    color: #202020;
+}
+img.v-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+.tabmenu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.tabmenu li {
+    position: relative;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 550;
+    color: #ACACAC;
+}
+li.active {
+    font-weight: 700;
+    color: #202020;
+}
+
+.tabmenu li:nth-child(-n+2)::after {
+    position: absolute;
+    top: 2.5px;
+    right: 0;
+    display: block;
+    content: '';
+    width: 1px;
+    height: 14px;
+    background-color: #ccc;
+}
+/* .tabmenu li:nth-child(2)::after {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: block;
+    content: '';
+    width: 1px;
+    height: 14px;
+    background-color: #ccc;
+} */
+
+li .menu{
+    height: 17px;
+    font-family: SUIT;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: right;
+    color: #acacac;
+}
+/* .rank_contents {
+    display: flex;
+    width: 100%;
+    /* height: 180px; 
+} */
+.rank_box {
+    width: 116px;
+    height: 100%;
+}
+
+.rank_box_img {
+    background-size: 100%;
+    width: 116px;
+    height: 154px;
+    margin: 12px 8px 7px 0;
+    padding: 1px 0 0;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.rank_box_img1 {
+    background-image: url(./img_rank/1.png);
+}
+.rank_box_img2 {
+    background-image: url(./img_rank/2.png);
+}
+.rank_box_img3 {
+    background-image: url(./img_rank/3.png);
+}
+
+.rank_box_img img{
+    width:40px;
+    height: 40px;
+}
+.live-img{
+    width:auto;
+    height: 40px;
+}
+.rank_img {
+    position: absolute;
+    background-size: 100%;
+    width: 49px;
+    height: 47px;
+    margin-top: 60px;
+    margin-left: 60px;
+    z-index: 1;
+}
+.rank-1{
+    background-image: url(./img_rank/number_W-1.png);
+}
+.rank-2{
+    background-image: url(./img_rank/number_W-2.png);
+}
+.rank-3{
+    background-image: url(./img_rank/number_W-3.png);
+}
+.gradation{
+    position: relative;
+    height: 114px;
+}
+.gradation::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 27px;
+    background-image: linear-gradient(to top, #000, rgba(0,0,0,0));
+    opacity: .5; 
+    border-radius: 12px;
+}
+.rank_box_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rank_box_name span{
+  height: 23px;
+  font-family: NotoSansCJKkr;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: #303030;
+}
+
+
+
+/* 4. 달린이? */
+.video {
+    margin-top: 20px;
+}
+.video_container {
+    width: 100%;
+    height: 200px;
+    margin-left: 16px;
+}
+.video_banner {
+    width: 100%;
+    line-height:30px;
+    font-family: SUIT;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    text-align: left;
+    color: #202020;
+}
+.video_contents {
+    display: flex;
+    width: 100%;
+    height: 160px;
+}
+.video_img {
+    background-size: 100%;
+    width: 116px;
+    height: 154px;
+    margin: 0 8px 0 0;
+    border-radius: 16px;
+    margin-right: 16px;
+    position:relative;
+}
+
+.video_first {
+    background-image: url(./img_video/3.png);
+}
+.video_second {
+    background-image: url(./img_video/3.png);
+}
+.video_third {
+    background-image: url(./img_video/3.png);
+}
+.video_ico {
+    background-image: url(./img_video/ico_video.png);
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+    margin: 0 0 59px 76px;
+    object-fit: contain;
+}
+.video_ico_none{
+    width: 40px;
+    height: 40px;
+    margin: 0 0 59px 76px;
+    object-fit: contain;
+}
+.gradation2 {
+    height: 55px;
+    position:relative;
+}
+.gradation2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 27px;
+    background-image: linear-gradient(to top, #000, rgba(0,0,0,0));
+    opacity: .5; 
+    border-radius: 0px 0px 15px 15px;
+}
+.video_title {
+    position: absolute;
+    margin-left: 8px;
+    bottom: 5px;
+    z-index:1;
+    height: 16px;
+    font-family: SUIT;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.27;
+    text-align: left;
+    color: #fff;
+}
+
+
+
+
+
+/* 5. 배너 */
+.banner {
+    margin-top: 12px;
+}
+.banner_contents {
+    background-image: url(./img_banner/banner.PNG);
+    background-size: 100%;
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-top: 28%;
+}
+.banner_num {
+    height: 20px;
+    padding: 2px 7px 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position:absolute;
+    bottom:14px;
+    right:0px;
+    border-radius: 20px 0px 0px 20px;
+}
+.banner_num span {
+    height: 16px;
+    opacity: 0.9;
+    font-family: SUIT;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.27;
+    text-align: left;
+    color: #fff;
+}
+
+/* 6. 라이브 */
+.live {
+    margin-top: 22px;
+}
+.live_container {
+    width: 100%;
+}
+.live_title {
+    width:100%;
+    height: 26px;
+    padding:0 16px;
+    box-sizing: border-box;
+}
+.live_title span{
+    height: 16px;
+    font-family: SUIT;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -1.2px;
+    text-align: left;
+    color: #202020;
+}
+.live_tap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 48px;
+}
+.live_tapmenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;
+    height: 100%;
+    margin-top: 18px;
+   
+}
+.live_tapmenu li{
+    flex:1;
+    height: 100%;
+    font-family: SUIT;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    color: #acacac;
+    position:relative;
+}
+.live_tapmenu li.active{
+    color: #202020;
+}
+.live_tapmenu li.active::after{
+    content: "";
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 4px;
+    width: 30px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #FF3C7B;
+}
+.live_contents{
+    display:flex;
+    flex-direction: column;
+    padding:0 16px;
+}
+.live_content{
+    display:flex;
+    width:100%;
+    height: 114px;
+    margin-top:12px;
+}
+.live_img {
+    flex-shrink: 0;
+    background-size: 100%;
+    width: 112px;
+    height: 112px;
+    position:relative;
+}
+.live_img1 {
+    background-image: url(./img_live/1.png);
+}
+.live_img2 {
+    background-image: url(./img_live/2.png);
+}
+.live_img3 {
+    background-image: url(./img_live/3.png);
+}
+.live_img4 {
+    background-image: url(./img_live/4.png);
+}
+.live_img5{
+    background-image: url(./img_live/5.png);
+}
+.live_img6{
+    background-image: url(./img_live/6.png);
+}
+
+.live_button {
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    right:2px;
+}
+
+.live_info {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    min-width:0;        /*flex시 글자넘어갈시 ...할려면 부모요소에 적용!*/
+    height: 100%;
+    padding: 4px 0;
+    margin-left: 15px;
+    box-sizing: border-box;
+
+}
+.listItem {
+    display: flex;
+}
+.listItem span {
+    display: block;
+    /* 글자넘어갈 시 ...하기 위한 3가지 요소 */
+    white-space: nowrap;  /*줄바꿈 방지*/
+    overflow: hidden;     /*영역에 벗어나면 보여주지않음*/
+    text-overflow: ellipsis; /*영역벗어나면 ...표시*/
+}
+
+.icon-special{
+    width: 62px;
+    height: 16px;
+}
+.icon-best{
+    width:46px;
+    height: 16px;
+}
+.icon-contents{
+    width: 70px;
+    height: 16px;
+}
+.icon-new{
+    width: 38px;
+    height: 16px;
+}
+span.title{
+  height: 20px;
+  font-family: SUIT;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.19;
+  text-align: left;
+  color: #303030;
+  margin-top:5px;
+  
+}
+span.nickNm {
+    height: 16px;
+    margin: 0 0 0 2px;
+    font-family: SUIT;
+    font-size: 10px;
+    line-height: 1.27;
+    text-align: left;
+    color: #666;
+}
+
+.listItem:nth-child(3) {
+    margin-top: auto;
+}
+.listItem:nth-child(3) img {
+    width: 14px;
+    height: 14px;
+}
+.listItem:nth-child(4) {
+    margin-top: 3px;
+    height: 20px;
+}
+i.dataCnt {
+    flex-shrink: 0;
+    display: inline-block;
+    margin-right: 4px;
+    padding-left: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #8B8B8B;
+    line-height: 20px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+}
+
+i.dataCnt.totalCnt {
+    background-image: url(https://image.dalbitlive.com/common/dataCnt/dataIcon-twoman.png);
+    background-size:17px;
+}
+i.dataCnt.entryCnt {
+    background-image: url(https://image.dalbitlive.com/common/dataCnt/dataIcon-oneman.png);
+    background-size:17px;
+}
+i.dataCnt.likeCnt {
+    background-image: url(https://image.dalbitlive.com/common/dataCnt/dataIcon-heart.png);
+    background-size:17px;
+}
+i.dataCnt.boostCnt{
+    background-image: url(./img_live/1_info3.png);
+    background-size:17px;
+}
+
+
+
+.live_img3 .with {
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    right:0px;
+    bottom:0px;
+}
+
+.listItem img{
+    margin-right: 4px;
+}
+
+
+/* 7. 푸터 */
+.footer {
+    margin-top: 15px;
+}
+
+.selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50px;
+    margin: 1px 0 0;
+    background-color: #fff;
+    border-top:  #f2f2f2 2px solid;
+}
+.selector img {
+    width: 40px;
+    height: 40px;
+}
