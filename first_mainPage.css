@@ -14,7 +14,8 @@
     /* 1. 태그는 최대한 간소화 할 것 */
     /* 2. absolute나 fixed로 띄웠을 경우 padding으로 공간 확보할 것 */
     /* 3. 글자 정렬 확실히 display:flex; align-item:center; justify-content:center; */
-* {
+    /* 4. gration같은 경우도 div를 생성하지말고 전체 div에서 after사용할 것 */
+    * {
     margin:0;
     padding:0;
 }
