@@ -8,6 +8,12 @@
     /* white-space: nowrap;  줄바꿈 방지 */
     /* overflow: hidden;     영역에 벗어나면 보여주지않음 */
     /* text-overflow: ellipsis; 영역벗어나면 ...표시 */
+
+/* 피드백 */
+    /* 0. class이름은 카멜방식을 이용할 것 */
+    /* 1. 태그는 최대한 간소화 할 것 */
+    /* 2. absolute나 fixed로 띄웠을 경우 padding으로 공간 확보할 것 */
+    /* 3. 글자 정렬 확실히 display:flex; align-item:center; justify-content:center; */
 * {
     margin:0;
     padding:0;
