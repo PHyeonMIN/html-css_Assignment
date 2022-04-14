@@ -9,4 +9,5 @@
    피드백내용 : 1. layout.scss
 <br>
 #### thirdAssignment
-   2022-04-13 ~ 2022-04-15 : 항공안전기술원 ( https://www.kiast.or.kr/kr/index.do ) copy + html/css + sass + swiper API  
+   2022-04-13 ~ 2022-04-15 : 항공안전기술원 ( https://www.kiast.or.kr/kr/index.do ) copy 
+                                 html/css + sass + swiper API  
