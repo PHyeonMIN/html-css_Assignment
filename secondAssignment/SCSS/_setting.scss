@@ -1,0 +1,35 @@
+// 1. layout.scss
+$backColor: #fbfbfb;
+
+// 2. top.scss
+$timeFont: AppleSDGothicNeoEB00;
+$iconColor: black;
+$mainFont: SUIT;
+$mainFontColor: #202020;
+$tabColor: #acacac;
+$borderColor: #d6d6d6;
+
+// 3. center.scss
+$mainFontColor2: #303030;
+
+// 4. depositInfo
+$buttonColor: #ff3c7b;
+$inputBack: #f6f6f6;
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  button {
+    border: 0;
+    outline: 0;
+  }
+  
+  div {
+    background-repeat: no-repeat;
+  }

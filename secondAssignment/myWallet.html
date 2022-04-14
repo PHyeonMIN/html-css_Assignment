@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="./CSS1/1. main.css" />
+    <link rel="stylesheet" href="./CSS1/2. phoneState.css" />
+    <link rel="stylesheet" href="./CSS1/3. top.css" />
+    <link rel="stylesheet" href="./CSS1/4. exchange.css" />
+    <link rel="stylesheet" href="./CSS1/5. depositInfo.css" />
+    <link rel="stylesheet" href="./CSS1/6-1. newInfo.css" />
+    <link rel="stylesheet" href="./CSS1/6-2. accountInfoWrap.css" />
+    <link rel="stylesheet" href="./CSS1/6-3. myAccount.css" /> -->
+
+    <link rel="stylesheet" href="./css/1. layout.css" />
+    <link rel="stylesheet" href="./css/2. top.css" />
+    <link rel="stylesheet" href="./css/3. center.css" />
+    <link rel="stylesheet" href="./css/4. depositInfo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="fixedTop">
+        <!-- phoneState (휴대폰상태 상단) -->
+        <section class="phoneStateWrap">
+          <div class="time">8:53</div>
+          <div class="topIcon spread"></div>
+          <div class="topIcon wifi"></div>
+          <div class="topIcon battery"></div>
+        </section>
+
+        <!-- top-->
+        <section class="topWrap">
+          <div class="backArrow"></div>
+          <div class="topTitle">내 지갑</div>
+          <div class="moonPoint">
+            <div class="moonImg"></div>
+            <div class="point">2,310</div>
+          </div>
+        </section>
+
+        <!-- topTabmenu -->
+        <section class="topTabmenuWrap">
+          <ul class="topTabmenu">
+            <li onclick="topTabChange(1)" class="topTab">달 내역</li>
+            <li onclick="topTabChange(2)" class="topTab">별 내역</li>
+            <li onclick="topTabChange(3)" class="topTab active">환전</li>
+          </ul>
+        </section>
+      </div>
+      <!-- exchange (환전) -->
+      <section class="exchangeWrap">
+        <div class="curious">
+          <div class="curiousIcon">?</div>
+          <div class="curiousText">환전이 궁금하시다면?</div>
+        </div>
+        <div class="starInfo">
+          <div class="starInfoContainer holdStar">
+            <div class="starName">
+              <div class="starImg"></div>
+              보유 별
+            </div>
+            <div class="starCount">5,000<span>개</span></div>
+          </div>
+          <div class="precaution">
+            <div class="bar"></div>
+            <ul>
+              <li>별은 570이상이어야 환전 신청이 가능합니다.</li>
+              <li>별 1개당 KRW 60으로 환전됩니다.</li>
+            </ul>
+          </div>
+          <div class="starInfoContainer exchangeStar">
+            <div class="starName">
+              <div class="starImg"></div>
+              환전 신청 별
+            </div>
+            <div class="starCount">3,000<span>개</span></div>
+          </div>
+        </div>
+        <div class="exchangeButton">
+          <button class="calculate">환전 계산하기</button>
+          <button class="moonExchange">달 교환</button>
+        </div>
+      </section>
+
+      <!-- depositInfo (입금정보) -->
+      <section class="depositInfoWrap">
+        <div class="depositInfoTitle">입금 정보</div>
+        <ul class="depositTabmenu">
+          <li onclick="tabChange(1)" class="listItem firstTap active">
+            신규정보
+          </li>
+          <li onclick="tabChange(2)" class="listItem secondTap">최근계좌</li>
+          <li onclick="tabChange(3)" class="listItem thirdTap">내 계좌</li>
+        </ul>
+
+        <!-- newInfo (신규정보) -->
+        <div class="newInfoWrap">
+          <form class="formInfo">
+            <!-- <table class="formIist">
+              <tr>
+                <td class="formLabel">예금주</td>
+                <td class="formInput"><input type="text" /></td>
+              </tr>
+              <tr>
+                <td class="formLabel">은행</td>
+                <td class="formInput">
+                  <select>
+                    <option>NH농협</option>
+                    <option>광주은행</option>
+                    <option>카카오뱅크</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="formLabel">계좌번호</td>
+                <td class="formInput"><input type="text"/></td>
+              </tr>
+              <tr>
+                <td class="formLabel">주민등록번호</td>
+                <td class="formInput"><input type="text" />-<input type="text" /></td>
+              </tr>
+              <tr>
+                <td class="formLabel">휴대폰 번호</td>
+                <td class="formInput"><input type="text" /></td>
+              </tr>
+              <tr>
+                <td class="formLabel">우편번호</td>
+                <td class="formInput">
+                    <input class="upload-addrName" value="" >
+                    <label class="fileLabel">
+                        주소검색
+                        <input type="file" class="hidden"/>
+                    </label> 
+                </td>
+              </tr>
+              <tr>
+                <td class="formLabel">주소</td>
+                <td class="formInput"><input type="text" /></td>
+              </tr>
+              <tr>
+                <td class="formLabel">상세주소</td>
+                <td class="formInput"><input type="text" placeholder="상세주소 입력" /></td>
+              </tr>
+              <tr>
+                <td class="formLabel">신분증 사본</td>
+                <td class="formInput">
+                    <input class="upload-identityCopyName" value="" >
+                    <label class="fileLabel" for="identityCopy">찾아보기</label> 
+                    <input type="file" id="identityCopy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="formLabel">통장사본</td>
+                <td class="formInput">
+                    <input class="upload-accountCopyName" value="" >
+                    <label class="fileLabel" for="accountCopy">찾아보기</label> 
+                    <input type="file" id="accountCopy"/>
+                </td>
+              </tr>
+            </table> -->
+            <div class="listContent">
+              <div class="listRow">
+                <div class="formLabel">예금주</div>
+                <div class="formInput">
+                  <label class="inputLabel">
+                    <input type="text" />
+                  </label>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">은행</div>
+                <div class="formInput">
+                  <select>
+                    <option>NH농협</option>
+                    <option>광주은행</option>
+                    <option>카카오뱅크</option>
+                  </select>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">계좌번호</div>
+                <div class="formInput">
+                  <label class="inputLabel"> <input type="text" /></label>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">주민등록번호</div>
+                <div class="inputWrap">
+                  <div class="formInput">
+                    <label class="inputLabel"> <input type="text" /></label>
+                  </div>
+                  <span>-</span>
+                  <div class="formInput">
+                    <label class="inputLabel"><input type="password" /></label>
+                  </div>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">휴대폰 번호</div>
+                <div class="formInput">
+                  <label class="inputLabel"> <input type="text" /></label>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">우편 번호</div>
+                <div class="inputWrap">
+                  <div class="formInput">
+                    <label class="fileLabel">
+                      <div class="fileName"></div>
+                      <input type="file" class="hidden addrName" onchange="fileUpload()"/>
+                    </label>
+                    <button class="findBtn">주소검색</button>
+                  </div>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">주소</div>
+                <div class="formInput">
+                  <label class="inputLabel"> <input type="text" /></label>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">상세주소</div>
+                <div class="formInput">
+                  <label class="inputLabel">
+                    <input type="text" placeholder="상세주소 입력" />
+                  </label>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">신분증사본</div>
+                
+                <div class="inputWrap">
+                  <div class="formInput">
+                    <label class="fileLabel">
+                      <p class="fileName"></p>
+                      <input type="file" class="hidden identityCopy" onchange="fileUpload()"/>
+                    </label>
+                    <button class="findBtn">찾아보기</button>
+                  </div>
+                </div>
+              </div>
+              <div class="listRow">
+                <div class="formLabel">통장사본</div>
+                
+                <div class="inputWrap">
+                  <div class="formInput">
+                    <label class="fileLabel">
+                      <p class="fileName"></p>
+                      <input type="file" class="hidden accountCopy" onchange="fileUpload()"/>
+                    </label>
+                    <button class="findBtn">찾아보기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="infoAgree">
+              <label class="infoAgreeIcon">
+                <input type="checkbox" />
+                <div class="designCheck">
+                  <img class="infoCheck" src="./img/check.png" />
+                </div>
+                <div class="infoAgreeText">개인정보 수집 동의</div>
+              </label>
+              <span>[필수]</span>
+            </div>
+            <div class="infoAgreeDetail">
+              회사는 환전의 목적으로 회원 동의 하에 관계 법령에서 정하는 바에
+              따라 개인정보를 수집할 수 있습니다. (수집된 개인정보는 확인 후
+              폐기 처리 합니다.)
+            </div>
+
+            <button class="applyButton">환전 신청하기</button>
+          </form>
+        </div>
+
+        <!-- accountInfo (최근계좌) -->
+        <div class="accountInfoWrap" style="display: none">
+          <form class="formInfo">
+            <!-- <table class="formIist">
+                <tr>
+                    <td class="formLabel">예금주</td>
+                    <td class="formInput"><input type="text" placeholder="홍길동"/></td>
+                  </tr>
+                  <tr>
+                    <td class="formLabel">은행</td>
+                    <td class="formInput">
+                      <select>
+                        <option>NH농협</option>
+                        <option selected>광주은행</option>
+                        <option>카카오뱅크</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="formLabel">계좌번호</td>
+                    <td class="formInput"><input type="text" placeholder="222222-33-4444444"/></td>
+                  </tr>
+                  <tr>
+                    <td class="formLabel">주민등록번호</td>
+                    <td class="formInput"><input type="text" placeholder="020101"/>-<input type="text" placeholder="4"/></td>
+                  </tr>
+                  <tr>
+                    <td class="formLabel">휴대폰 번호</td>
+                    <td class="formInput"><input type="text" placeholder="010-1234-5678"/></td>
+                  </tr>
+                  <tr>
+                    <td class="formLabel">주소</td>
+                    <td class="formInput"><textarea placeholder="광주광역시 서구 치평동 1326 4층 여보야"></textarea></td>
+                  </tr>
+            </table> -->
+            <div class="listRow">
+              <div class="formLabel">예금주</div>
+              <div class="formInput">
+                <label class="inputLabel">
+                  <input type="text" placeholder="홍길동" />
+                </label>
+              </div>
+            </div>
+            <div class="listRow">
+              <div class="formLabel">은행</div>
+              <div class="formInput">
+                <select>
+                  <option>NH농협</option>
+                  <option selected>광주은행</option>
+                  <option>카카오뱅크</option>
+                </select>
+              </div>
+            </div>
+            <div class="listRow">
+              <div class="formLabel">계좌번호</div>
+              <div class="formInput">
+                <label class="inputLabel">
+                  <input type="text" placeholder="222222-33-4444444" />
+                </label>
+              </div>
+            </div>
+            <div class="listRow">
+              <div class="formLabel">주민등록번호</div>
+              <div class="inputWrap">
+                <div class="formInput">
+                  <label class="inputLabel">
+                    <input type="text" placeholder="020101" />
+                  </label>
+                </div>
+                <span>-</span>
+                <div class="formInput">
+                  <label class="inputLabel">
+                    <input type="password" placeholder="4******" />
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="listRow">
+              <div class="formLabel">휴대폰 번호</div>
+              <div class="formInput">
+                <label class="inputLabel">
+                  <input type="text" placeholder="010-1234-5678" />
+                </label>
+              </div>
+            </div>
+            <div class="listRow">
+              <div class="formLabel">주소</div>
+              <div class="formInput">
+                <textarea
+                  placeholder="광주광역시 서구 치평동 1326 4층 여보야"
+                ></textarea>
+              </div>
+            </div>
+            <button class="applyButton">환전 신청하기</button>
+          </form>
+        </div>
+
+        <!-- myAccount (내계좌) -->
+        <div class="myAccount" style="display: none">
+          <div class="myAccountText">등록된 내 계좌가 없어요.</div>
+          <button class="addAccount">+ 계좌추가</button>
+        </div>
+      </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./myWallet.js"></script>
+  </body>
+</html>

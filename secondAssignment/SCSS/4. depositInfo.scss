@@ -1,0 +1,272 @@
+@import "func";
+
+.depositInfoTitle {
+  @include fontFunc($mainFont, 20px, 500, normal, $mainFontColor, -2px);
+  margin-left: 16px;
+}
+
+.depositTabmenu {
+  @include flexSort(stretch, flex-start, row);
+  margin-top: 17px;
+  margin-left: 16px;
+
+  .listItem {
+    @include fontFunc($mainFont, 13px, 500, 36px, #acacac, -0.78px);
+
+    background-color: #f6f6f6;
+    border-radius: 36px;
+    width: 78px;
+    text-align: center;
+    margin-right: 8px;
+
+    &.active {
+      background-color: #202020;
+      color: #ffffff;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------
+
+.newInfoWrap {
+  width: 100%;
+  @include flexSort(center, center, column);
+}
+.formInfo {
+  width: 100%;
+  @include flexSort(center, center, column);
+  .listContent {
+    width: 100%;
+    @include flexSort(stretch, flex-start, column);
+  }
+  .listRow {
+    width: 100%;
+    @include flexSort(center, flex-start, row);
+
+    padding: 0 16px;
+    box-sizing: border-box;
+    margin-top: 16px;
+
+    .formLabel {
+      flex-shrink: 0;
+      width: 74px;
+      @include fontFunc($mainFont, 13px, 500, normal, $mainFontColor, -0.78px);
+      text-align: start;
+    }
+    .inputWrap {
+      width: 100%;
+      @include flexSort(center, flex-start, row);
+
+      buttton {
+        width: 84px;
+        flex-shrink: 0;
+        @include fontFunc($mainFont, 15px, 600, 48px, $buttonColor, normal);
+        border: 1px solid $buttonColor;
+        border-radius: 16px;
+        background-color: #ffffff;
+        margin-left: 8px;
+      }
+    }
+    .formInput {
+      width: 100%;
+      @include flexSort(center, center, row);
+
+      span {
+        margin: 0 2px;
+      }
+
+      select {
+        @include WidthHeight(100%, 50px);
+
+        border: none;
+        border-radius: 20px;
+        background-color: $inputBack;
+        padding: 0 16px;
+
+        &:focus {
+          outline: 2px solid #ff6999;
+        }
+      }
+      textarea {
+        @include WidthHeight(100%, 50px);
+
+        border: none;
+        border-radius: 20px;
+        background-color: $inputBack;
+        padding: 16px;
+        &:focus {
+          outline: 2px solid #ff6999;
+        }
+      }
+
+      // input[type="file"] {
+      //   @include WidthHeight(0, 0);
+      //   position: absolute;
+      //   padding: 0;
+      //   border: 0;
+      //   overflow: hidden;
+      // }
+
+      .fileLabel {
+        @include WidthHeight(100%, 42px);
+        @include flexSort(center, flex-start, row);
+        background-color: #f6f6f6;
+        vertical-align: middle;
+        border-radius: 14px;
+        border: none;
+        @include fontFunc($mainFont, 12px, 600, normal, black, normal);
+        padding: 0 16px;
+        // transition: 2s;
+
+        .fileName {
+          width:100%;
+        }
+
+        &:focus-within {
+          outline: 2px solid #ff6999;
+        }
+
+        input::file-selector-button{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.findBtn {
+  @include WidthHeight(84px, 42px);
+  background-color: white;
+  border-radius: 16px;
+  border: solid 2px #ff3c7b;
+
+  font-family: $mainFont;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff3c7b;
+
+  margin-left: 8px;
+}
+
+.listRow {
+  .inputLabel {
+    @include WidthHeight(100%, 50px);
+    @include flexSort(center, center, row);
+    border: none;
+    border-radius: 20px;
+    background-color: $inputBack;
+    padding: 0 16px;
+
+    input {
+      width: 100%;
+      border: none;
+      background-color: $inputBack;
+      outline: none;
+    }
+    &:focus-within {
+      outline: 2px solid #ff6999;
+    }
+  }
+}
+.hidden {
+  @include WidthHeight(0, 0);
+  display: block;
+  overflow: hidden;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.infoAgree {
+  width: calc(100% - 16px);
+  display: flex;
+  align-items: center;
+  margin-top: 38px;
+  margin-left: 16px;
+
+  .infoAgreeIcon {
+    @include WidthHeight(auto, 23px);
+    @include flexSort(center, center, row);
+
+    input[type="checkbox"] {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    input:checked {
+      ~ .designCheck {
+        background-color: #202020;
+      }
+    }
+
+    .designCheck {
+      flex-shrink: 0;
+      @include flexSort(center, center, row);
+      background-color: #d6d6d6;
+      border-radius: 50%;
+      width: 23px;
+      height: 23px;
+
+      .infoCheck {
+        width: 100%;
+        @include WidthHeight(13px, 13px);
+      }
+    }
+
+    .infoAgreeText {
+      @include fontFunc($mainFont, 16px, 600, normal, $mainFontColor, normal);
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+  }
+
+  span {
+    @include fontFunc($mainFont, 12px, bold, normal, $buttonColor, -0.72px);
+    margin-left: 4px;
+  }
+}
+
+.infoAgreeDetail {
+  @include fontFunc($mainFont, 12px, normal, normal, $mainFontColor, -0.72px);
+  text-align: start;
+  margin-top: 11px;
+  padding: 0px 16px;
+  box-sizing: border-box;
+}
+
+.applyButton {
+  @include WidthHeight(328px, 47px);
+  border-radius: 18px;
+  background-color: #ffd4e1;
+  margin: 40px 0;
+
+  @include fontFunc($mainFont, 16px, bold, normal, #ffffff, normal);
+}
+
+#privacyOrder {
+  display: none;
+}
+
+// tab2--------------------------------------------------------------------
+.accountInfoWrap {
+  @include flexSort(center, center, column);
+}
+// tab3--------------------------------------------------------------------
+.myAccount {
+  @include flexSort(center, center, column);
+  height: 400px;
+
+  .myAccountText {
+    @include fontFunc($mainFont, 15px, 500, normal, $mainFontColor, normal);
+    text-align: center;
+  }
+
+  .addAccount {
+    @include WidthHeight(84px, 36px);
+    border-radius: 36px;
+    border: solid 2px $borderColor;
+    background-color: #ffffff;
+    margin-top: 16px;
+  }
+}

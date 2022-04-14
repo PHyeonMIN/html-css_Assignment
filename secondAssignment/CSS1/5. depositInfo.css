@@ -1,0 +1,33 @@
+.depositInfoTitle {
+  font-family: SUIT;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  color: #202020;
+  margin-left: 16px;
+}
+
+.depositTabmenu {
+  display: flex;
+  flex-direction: row;
+  margin-top: 17px;
+  margin-left: 16px;
+}
+.listItem {
+  width: 78px;
+  line-height: 36px;
+  background-color: #f6f6f6;
+  border-radius: 36px;
+
+  font-family: SUIT;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.78px;
+  color: #acacac;
+  text-align: center;
+  margin-right: 8px;
+}
+.listItem.active {
+  background-color: #202020;
+  color: #ffffff;
+}

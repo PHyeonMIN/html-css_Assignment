@@ -1,0 +1,15 @@
+.accountInfoWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formInput textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding: 16px 16px;
+}

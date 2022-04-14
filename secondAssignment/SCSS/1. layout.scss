@@ -1,0 +1,69 @@
+/*
+피드백 내용
+  1. fixed 대신에 sticky 적용 : fixed는 버그가 좀 있음(쓸거면 width값 고정)
+      sticky : 스크롤이 움직이면 fixed 같이 박스 고정
+  2. input태그는 label로 무조건 감쌀 것 + input을 디자인하는게 아니라 label 디자인
+  3. 기능적인 요소들 생각할 것
+      신분증사본, 통장사본 : 박스와 찾아보기가 같은 역할 + 파일명 띄우기
+      우편번호 : kakao API 활용해서 띄우기
+*/
+/*
+sass 피드백
+  1. family size color만 mixin으로 만듬
+  2. 변수 파일도 따로 만들어서 import해 줄 것
+  3. 매개변수는 null로 기본값으로 둘 것 ex) $align:null
+*/
+@import "func";
+
+
+
+.container {
+  @include WidthHeight(auto, 850px);
+  @include flexSort(center, flex-start, column);
+  background-color: $backColor;
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+.fixedTop {
+  width: 100%;
+  @include flexSort(center, center, column);
+  background-color: $backColor;
+
+  position: sticky;
+  left: 0;
+  top:0;
+  z-index: 1;
+}
+
+.phoneStateWrap {
+  @include WidthHeight(100%, 44px);
+  @include flexSort(center, center, row);
+
+  margin-top: 10px;
+}
+
+.topWrap {
+  @include WidthHeight(100%, 52px);
+  @include flexSort(center, space-between, row);
+}
+
+.topTabmenuWrap {
+  @include WidthHeight(100%, 48px);
+  @include flexSort(center, center, row);
+}
+
+.exchangeWrap {
+  @include WidthHeight(100%, auto);
+  @include flexSort(stretch, flex-start, column);
+
+  // padding-top: 150px;
+}
+
+.depositInfoWrap {
+  @include WidthHeight(100%, 100%);
+  @include flexSort(stretch, flex-start, column);
+
+  margin-top: 38px;
+}

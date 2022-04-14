@@ -1,0 +1,499 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+div {
+  background-repeat: no-repeat;
+}
+
+.depositInfoTitle {
+  font-family: SUIT;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: #202020;
+  letter-spacing: -2px;
+  margin-left: 16px;
+}
+
+.depositTabmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 17px;
+  margin-left: 16px;
+}
+
+.depositTabmenu .listItem {
+  font-family: SUIT;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #acacac;
+  letter-spacing: -0.78px;
+  background-color: #f6f6f6;
+  border-radius: 36px;
+  width: 78px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.depositTabmenu .listItem.active {
+  background-color: #202020;
+  color: #ffffff;
+}
+
+.newInfoWrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formInfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formInfo .listContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formInfo .listRow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.formInfo .listRow .formLabel {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 74px;
+  font-family: SUIT;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  color: #202020;
+  letter-spacing: -0.78px;
+  text-align: start;
+}
+
+.formInfo .listRow .inputWrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.formInfo .listRow .inputWrap buttton {
+  width: 84px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-family: SUIT;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 48px;
+  color: #ff3c7b;
+  letter-spacing: normal;
+  border: 1px solid #ff3c7b;
+  border-radius: 16px;
+  background-color: #ffffff;
+  margin-left: 8px;
+}
+
+.formInfo .listRow .formInput {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.formInfo .listRow .formInput span {
+  margin: 0 2px;
+}
+
+.formInfo .listRow .formInput select {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding: 0 16px;
+}
+
+.formInfo .listRow .formInput select:focus {
+  outline: 2px solid #ff6999;
+}
+
+.formInfo .listRow .formInput textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding: 16px;
+}
+
+.formInfo .listRow .formInput textarea:focus {
+  outline: 2px solid #ff6999;
+}
+
+.formInfo .listRow .formInput .fileLabel {
+  width: 100%;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #f6f6f6;
+  vertical-align: middle;
+  border-radius: 14px;
+  border: none;
+  font-family: SUIT;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  color: black;
+  letter-spacing: normal;
+  padding: 0 16px;
+}
+
+.formInfo .listRow .formInput .fileLabel .fileName {
+  width: 100%;
+}
+
+.formInfo .listRow .formInput .fileLabel:focus-within {
+  outline: 2px solid #ff6999;
+}
+
+.formInfo .listRow .formInput .fileLabel input::file-selector-button {
+  display: none;
+}
+
+.findBtn {
+  width: 84px;
+  height: 42px;
+  background-color: white;
+  border-radius: 16px;
+  border: solid 2px #ff3c7b;
+  font-family: SUIT;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff3c7b;
+  margin-left: 8px;
+}
+
+.listRow .inputLabel {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: none;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding: 0 16px;
+}
+
+.listRow .inputLabel input {
+  width: 100%;
+  border: none;
+  background-color: #f6f6f6;
+  outline: none;
+}
+
+.listRow .inputLabel:focus-within {
+  outline: 2px solid #ff6999;
+}
+
+.hidden {
+  width: 0;
+  height: 0;
+  display: block;
+  overflow: hidden;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.infoAgree {
+  width: calc(100% - 16px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 38px;
+  margin-left: 16px;
+}
+
+.infoAgree .infoAgreeIcon {
+  width: auto;
+  height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.infoAgree .infoAgreeIcon input[type="checkbox"] {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.infoAgree .infoAgreeIcon input:checked ~ .designCheck {
+  background-color: #202020;
+}
+
+.infoAgree .infoAgreeIcon .designCheck {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #d6d6d6;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+}
+
+.infoAgree .infoAgreeIcon .designCheck .infoCheck {
+  width: 100%;
+  width: 13px;
+  height: 13px;
+}
+
+.infoAgree .infoAgreeIcon .infoAgreeText {
+  font-family: SUIT;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  color: #202020;
+  letter-spacing: normal;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+.infoAgree span {
+  font-family: SUIT;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: normal;
+  color: #ff3c7b;
+  letter-spacing: -0.72px;
+  margin-left: 4px;
+}
+
+.infoAgreeDetail {
+  font-family: SUIT;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: normal;
+  color: #202020;
+  letter-spacing: -0.72px;
+  text-align: start;
+  margin-top: 11px;
+  padding: 0px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.applyButton {
+  width: 328px;
+  height: 47px;
+  border-radius: 18px;
+  background-color: #ffd4e1;
+  margin: 40px 0;
+  font-family: SUIT;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+
+#privacyOrder {
+  display: none;
+}
+
+.accountInfoWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.myAccount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 400px;
+}
+
+.myAccount .myAccountText {
+  font-family: SUIT;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  color: #202020;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.myAccount .addAccount {
+  width: 84px;
+  height: 36px;
+  border-radius: 36px;
+  border: solid 2px #d6d6d6;
+  background-color: #ffffff;
+  margin-top: 16px;
+}

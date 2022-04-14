@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+div {
+  background-repeat: no-repeat;
+}
+
+.time {
+  font-family: AppleSDGothicNeoEB00;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  margin-left: 26px;
+}
+
+.topIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.topIcon.spread {
+  background-image: url("../img/connection.png");
+  background-size: 100%;
+  margin-left: auto;
+}
+
+.topIcon.wifi {
+  background-image: url("../img/wifi.png");
+  background-size: 100%;
+  margin-left: 10px;
+}
+
+.topIcon.battery {
+  background-image: url("../img/battery.png");
+  background-size: 100%;
+  margin-left: 10px;
+  margin-right: 11px;
+}
+
+.backArrow {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../img/backArrow.png);
+  background-size: 100%;
+  margin-left: 4px;
+}
+
+.topTitle {
+  font-family: SUIT;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 0.56;
+  color: #202020;
+  letter-spacing: normal;
+}
+
+.moonPoint {
+  width: 68px;
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 2px solid #d6d6d6;
+  border-radius: 26px;
+  margin-right: 16px;
+}
+
+.moonPoint .moonImg {
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/moon.png");
+  background-size: 100%;
+}
+
+.moonPoint .point {
+  font-family: SUIT;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  color: #202020;
+  letter-spacing: normal;
+}
+
+.topTabmenu {
+  width: 100%;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  margin: 0 16px;
+}
+
+.topTabmenu li {
+  width: 100%;
+  height: 100%;
+  font-family: SUIT;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #acacac;
+  letter-spacing: normal;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  position: relative;
+  border-bottom: #acacac solid 2px;
+}
+
+.topTabmenu li.active {
+  font-family: SUIT;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 48px;
+  color: #202020;
+  letter-spacing: normal;
+  border-bottom: #202020 solid 2px;
+}

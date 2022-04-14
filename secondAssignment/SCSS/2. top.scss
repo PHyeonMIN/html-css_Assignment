@@ -1,0 +1,89 @@
+@import "func";
+
+.time {
+  font-family: $timeFont;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  margin-left: 26px;
+}
+
+.topIcon {
+  @include WidthHeight(20px, 20px);
+
+  &.spread {
+    background-image: url("../img/connection.png");
+    background-size: 100%;
+    margin-left: auto;
+  }
+
+  &.wifi {
+    background-image: url("../img/wifi.png");
+    background-size: 100%;
+    margin-left: 10px;
+  }
+
+  &.battery {
+    background-image: url("../img/battery.png");
+    background-size: 100%;
+    margin-left: 10px;
+    margin-right: 11px;
+  }
+}
+
+//   ------------------------------------------------------------------------
+.backArrow {
+  @include WidthHeight(40px, 40px);
+
+  background-image: url(../../img/backArrow.png);
+  background-size: 100%;
+  margin-left: 4px;
+}
+
+.topTitle {
+  @include fontFunc($mainFont, 18px, 600, 0.56, $mainFontColor, normal);
+}
+
+.moonPoint {
+  @include WidthHeight(68px, 26px);
+  @include flexSort(center, space-evenly, row);
+
+  border: 2px solid $borderColor;
+  border-radius: 26px;
+  margin-right: 16px;
+
+  .moonImg {
+    @include WidthHeight(18px, 18px);
+    background-image: url("../img/moon.png");
+    background-size: 100%;
+  }
+
+  .point {
+    @include fontFunc($mainFont, 12px, 500, normal, $mainFontColor, normal);
+  }
+}
+
+// -------------------------------------------------------------------------
+
+.topTabmenu {
+  @include WidthHeight(100%, 48px);
+  @include flexSort(center, space-evenly, row);
+
+  position: relative;
+  margin: 0 16px;
+
+  li {
+    @include WidthHeight(100%, 100%);
+    @include fontFunc($mainFont, 16px, 500, 48px, $tabColor, normal);
+
+    flex: 1;
+    text-align: center;
+    position: relative;
+    border-bottom: $tabColor solid 2px;
+
+    &.active {
+      @include fontFunc($mainFont, 16px, 600, 48px, $mainFontColor, normal);
+      border-bottom: $mainFontColor solid 2px;
+    }
+  }
+}

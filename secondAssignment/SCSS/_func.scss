@@ -1,0 +1,31 @@
+@import "setting";
+
+@mixin WidthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexSort($align: stretch, $justify: flex-start, $sortAdd: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $sortAdd;
+}
+
+@mixin fontFunc($family, $size, $weight, $height, $color, $letter) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+  letter-spacing: $letter;
+}
+
+@mixin hiddenMix(){
+    width: 0;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    margin-left: -1px;
+    margin-top:  -1px;
+}

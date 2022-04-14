@@ -1,0 +1,211 @@
+.newInfoWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.formInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formIist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 16px;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.listContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.listRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.hidden {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+}
+
+.inputWrap button {
+  flex-shrink: 0; /* width값 고정 */
+  border: 1px solid #ff3c7b;
+  border-radius: 16px;
+  background-color: #ffffff;
+  width: 84px;
+  line-height: 48px;
+  margin-left: 8px;
+  color: #ff3c7b;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.formLabel {
+  flex-shrink: 0;
+  width: 74px;
+  font-family: SUIT;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.78px;
+  color: #303030;
+  text-align: start;
+}
+.formInput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formInput span {
+  margin: 0 2px;
+}
+.formInput input,
+select {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  padding: 0px 16px;
+}
+.formInput input:focus {
+  outline: 2px solid #ff6999;
+}
+.fileLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 98px;
+  height: 42px;
+  vertical-align: middle;
+  border-radius: 14px;
+  border: solid 2px #ff3c7b;
+
+  font-family: SUIT;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff3c7b;
+  margin-left: 8px;
+  transition: 2s;
+}
+.fileLabel:hover {
+  background-color: #ff3c7b;
+  color: #ffffff;
+  transition: 2s;
+}
+.formInput input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+.infoAgree {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 38px;
+  margin-left: 30px;
+  width: 100%;
+}
+.infoAgreeIcon {
+  height: 23px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type="checkbox"] {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+input:checked ~.designCheck{
+    background-color: #202020;
+}
+.designCheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+  background-color: #d6d6d6;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+}
+.infoCheck {
+  width: 13px;
+  height: 13px;
+}
+.infoAgreeText {
+  font-family: SUIT;
+  font-size: 16px;
+  font-weight: 600;
+  color: #303030;
+  margin-left: 8px;
+  white-space: nowrap;
+
+}
+.infoAgree span {
+  font-family: SUIT;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.72px;
+  color: #ff3c7b;
+  margin-left: 4px;
+}
+
+.infoAgreeDetail {
+  font-family: SUIT;
+  font-size: 12px;
+  letter-spacing: -0.72px;
+  color: #303030;
+  text-align: start;
+  margin-top: 11px;
+  padding: 0px 16px;
+  box-sizing: border-box;
+}
+
+.applyButton {
+  width: 328px;
+  height: 47px;
+  border-radius: 18px;
+  background-color: #ffd4e1;
+  margin: 40px 0px;
+
+  font-family: SUIT;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#privacyOrder {
+  display: none;
+}

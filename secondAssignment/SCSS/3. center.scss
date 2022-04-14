@@ -1,0 +1,131 @@
+@import "func";
+
+.curious {
+  @include flexSort(center, flex-start, row);
+
+  margin-left: 16px;
+  margin-top: 15px;
+
+  .curiousIcon {
+    background-color: #666666;
+    width: 20px;
+    border-radius: 50%;
+
+    @include fontFunc(NotoSansCJKkr, 1px, 500, 20px, #fbfbfb, -1.1px);
+    text-align: center;
+  }
+
+  .curiousText {
+    @include fontFunc($mainFont, 12px, 500, normal, $mainFontColor2, -0.72px);
+
+    text-align: left;
+    margin-left: 4px;
+  }
+}
+
+.starInfo {
+  @include flexSort(center, flex-start, column);
+
+  margin: 0 16px;
+  margin-top: 16px;
+
+  .starInfoContainer {
+    @include WidthHeight(328px, 75px);
+    @include flexSort(center, space-between, row);
+
+    border-radius: 16px;
+
+    &.holdStar {
+      background-color: #f6f6f6;
+    }
+
+    &.exchangeStar {
+      background-color: #fff5f8;
+      .starCount {
+        color: #ff3c7b;
+      }
+    }
+
+    .starName {
+      @include flexSort(center, flex-start, row);
+      @include fontFunc($mainFont, 13px, 600, normal, $mainFontColor2, normal);
+
+      margin-left: 16px;
+
+      .starImg {
+        @include WidthHeight(25px, 25px);
+
+        background-image: url("../img/star.png");
+        background-size: 100%;
+        margin-right: 4px;
+      }
+    }
+
+    .starCount {
+      @include fontFunc($mainFont, 24px, 600, normal, $mainFontColor2, normal);
+      margin-right: 14px;
+
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.precaution {
+  width:310px;
+  @include fontFunc($mainFont, 12px, 500, 20px, $mainFontColor2, -0.72px);
+  display: flex;
+  position: relative;
+  margin-left: 18px;
+
+  &::before {
+    content: "";
+    height: 100%;
+    border: solid 1px #dcdcdc;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .bar {
+    @include WidthHeight(1px, 100%);
+    background-color: #eee;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin: 14px 0;
+    margin-left: 13px;
+  }
+
+  li {
+    &::marker {
+      color: #dcdcdc;
+      font-size: 12px;
+    }
+  }
+}
+
+.exchangeButton {
+  @include flexSort(center, space-evenly, row);
+  margin: 16px;
+
+  .calculate {
+    @include WidthHeight(160px, 48px);
+    @include fontFunc($mainFont, 16px, 600, 48px, #ff6999, normal);
+
+    background-color: #fff;
+    width: 160px;
+    border-radius: 16px;
+    border: solid 2px #ff6999;
+  }
+
+
+  .moonExchange {
+    @include fontFunc($mainFont, 16px, 600, 48px, #fff, normal);
+
+    background-color: #ff6999;
+    width: 160px;
+    border-radius: 16px;
+  }
+}

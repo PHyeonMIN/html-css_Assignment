@@ -1,0 +1,30 @@
+.time {
+  font-family: AppleSDGothicNeoEB00;
+  font-size :15px;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  margin-left: 26px;
+}
+
+.topIcon {
+  height: 20px;
+  width: 20px;
+}
+.spread {
+  background-image: url(../img/connection.png);
+  background-size: 100%;
+  margin-left: auto;
+}
+
+.wifi {
+  background-image: url(../img/wifi.png);
+  background-size: 100%;
+  margin-left: 10px;
+}
+
+.battery {
+  background-image: url(../img/battery.png);
+  background-size: 100%;
+  margin-left: 10px;
+  margin-right: 11px;
+}
