@@ -6,5 +6,7 @@
 <br>
 #### secondAssignment  
    2022-04-11 ~ 2022-04-13 : html/css + 간단한 JS + sass적용  
-   피드백내용 : 1. layout.scss
-
+   피드백내용 : 1. layout.scss  
+<br>
+#### thirdAssignment
+   2022-04-13 ~ 2022-04-15 : 항공안전기술원 ( https://www.kiast.or.kr/kr/index.do ) copy + html/css + sass + swiper API  
