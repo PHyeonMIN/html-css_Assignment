@@ -1,0 +1,36 @@
+@import "mixin";
+
+.noticeWrap {
+    @include flexSort(center,center,row);
+
+    .noticeImg {
+        @include widthHeight(91px,71px);
+        background-image: url("../1popUpImg/noticeIcon.png");
+        background-size: 100%;
+        margin-right:16px;
+    }
+    
+    .noticeText{
+        @include flexSort(center, center, column);
+        margin-right:16px;
+        @include fontFunc($mainFont, 22px, white);
+        line-height: 26px;
+        letter-spacing: -1.2px;
+
+        span{
+            @include fontFunc($mainFont,15px, #c5cbd3);
+            line-height: 20px;
+            margin-top: 10px;
+        }
+    }
+
+    .moreIcon {
+        @include widthHeight(70px, 70px);
+        @include flexSort(center,center);
+        background-color: #384a66;
+        border-radius: 50%;
+
+        @include fontFunc($mainFont,12px,white);
+    }
+}
+

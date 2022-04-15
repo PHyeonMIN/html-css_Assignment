@@ -1,0 +1,154 @@
+@import "mixin";
+.infoWrap {
+  @include flexSort(center, center);
+  position: relative;
+  width: 1240px;
+  padding-left: 180px;
+  margin-bottom: 110px;
+}
+.infoText {
+  position: absolute;
+  top: 140px;
+  left: 0px;
+  h2 {
+    display: block;
+    @include fontFunc(ttum, 70px, #fff);
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+  }
+  p {
+    @include fontFunc(ttum, 19px, #fff);
+    font-weight: 400;
+    line-height: 1.47;
+    letter-spacing: -1px;
+  }
+}
+
+.infoImg {
+  @include widthHeight(100%, auto);
+  @include flexSort(center, center, row);
+  .line {
+    // @include widthHeight(240px,340px);
+    @include flexSort(center, center, column);
+    width: 190px;
+    float: left;
+    overflow: hidden;
+    margin-left: 2px;
+    .imgBox {
+      @include widthHeight(240px, 340px);
+      background-size: cover;
+      background-position: 50% 50%;
+      margin-top: 2px;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      &::before {
+        @include widthHeight(100%, 100%);
+        content: "";
+        background: rgba(255, 255, 255, 0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(2.9, 2.4) rotate(45deg) translate(0, -100%);
+        transition: transform 0.6s;
+      }
+      &:hover {
+        &::before {
+          transform: scale(1.9, 1.4) rotate(45deg) translate(0, 100%);
+        }
+      }
+    }
+    .infoImg1 {
+      background-image: url("../3introduce/intro1.jpg");
+    }
+    .infoImg2 {
+      background-image: url("../3introduce/intro2.jpg");
+    }
+    .infoImg3 {
+      background-image: url("../3introduce/intro3.jpg");
+    }
+    .infoImg4 {
+      background-image: url("../3introduce/intro4.jpg");
+    }
+    .infoImg5 {
+      background-image: url("../3introduce/intro5.jpg");
+    }
+    .infoImg6 {
+      background-image: url("../3introduce/intro6.jpg");
+    }
+    .infoImg7 {
+      background-image: url("../3introduce/intro7.jpg");
+    }
+    .infoImg8 {
+      background-image: url("../3introduce/intro8.jpg");
+    }
+    .infoImg9 {
+      background-image: url("../3introduce/intro9.png");
+    }
+  }
+  .col1 {
+    margin-top: 405px;
+  }
+  .col3 {
+    margin-top: 160px;
+  }
+  .col4 {
+    margin-top: 90px;
+  }
+}
+.infoSort {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  .infoIcon1 {
+    @include widthHeight(40px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -111px -495px;
+  }
+  .infoIcon2 {
+    @include widthHeight(43px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -1px -495px;
+  }
+  .infoIcon3 {
+    @include widthHeight(38px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -154px -495px;
+  }
+  .infoIcon4 {
+    @include widthHeight(30px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -47px -495px;
+  }
+  .infoIcon5 {
+    @include widthHeight(32px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -195px -495px;
+  }
+  .infoIcon6 {
+    @include widthHeight(28px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -80px -495px;
+  }
+  .infoIcon7 {
+    @include widthHeight(31px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -230px -495px;
+  }
+  .infoIcon8 {
+    @include widthHeight(40px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -457px -495px;
+  }
+  .infoIcon9 {
+    @include widthHeight(32px, 37px);
+    background-image: url("../3introduce/infoIcon.png");
+    background-position: -498px -495px;
+  }
+  span {
+    @include fontFunc(nsr, 24px, #fff);
+    font-weight: 400;
+  }
+}

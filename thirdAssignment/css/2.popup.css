@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+div {
+  background-repeat: no-repeat;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+.noticeWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.noticeWrap .noticeImg {
+  width: 91px;
+  height: 71px;
+  background-image: url("../1popUpImg/noticeIcon.png");
+  background-size: 100%;
+  margin-right: 16px;
+}
+
+.noticeWrap .noticeText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 16px;
+  font-family: nsk_m;
+  font-size: 22px;
+  color: white;
+  line-height: 26px;
+  letter-spacing: -1.2px;
+}
+
+.noticeWrap .noticeText span {
+  font-family: nsk_m;
+  font-size: 15px;
+  color: #c5cbd3;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.noticeWrap .moreIcon {
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #384a66;
+  border-radius: 50%;
+  font-family: nsk_m;
+  font-size: 12px;
+  color: white;
+}

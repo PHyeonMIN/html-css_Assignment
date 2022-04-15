@@ -1,0 +1,68 @@
+@import "mixin";
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+//   background-position: center;
+//   background-size: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color:white;
+}
+
+.swiper-button-next {
+    margin-right:350px;
+}
+.swiper-button-prev {
+    margin-left:350px;
+}
+
+.swiper-pagination {
+    top:500px;
+}
+
+.swiper-button-next2 {
+    margin-right:150px;
+    top:400px;
+    padding-right: 50px;
+    font-weight: bold;
+    &::after {
+        content: "";
+        position: absolute;
+        @include widthHeight(31px,1px);
+        background-color: #fff;
+        margin-left: 14px;
+        right: 0;
+    }
+}
+.swiper-button-prev2 {
+    margin-left:150px;
+    top:400px;
+    padding-left: 50px;
+    font-weight: bold;
+    &::before {
+        content: "";
+        position: absolute;
+        @include widthHeight(31px,1px);
+        background-color: #fff;
+        // margin-left: 14px;
+        left: 0;
+    }
+    &::after{
+        content:"";
+    }
+}
+
+.swiper-pagination-bullet {
+    @include widthHeight(15px,15px);
+    background-color: white;
+    margin-right: 15px !important;
+
+}

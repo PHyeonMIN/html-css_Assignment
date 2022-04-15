@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/1.layout.css" />
+    <link rel="stylesheet" href="./css/2.popup.css" />
+    <link rel="stylesheet" href="./css/3-1.headerFixed.css" />
+    <link rel="stylesheet" href="./css/3-2.headerSwiper.css" />
+    <link rel="stylesheet" href="./css/3-3.headerTabInfo.css" />
+    <link rel="stylesheet" href="./css/4.introduce.css" />
+    <link rel="stylesheet" href="./css/5.swiper.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- pop-up -->
+      <div class="popup">
+        <!-- pop-up Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="noticeWrap">
+                <div class="noticeImg"></div>
+                <div class="noticeText">
+                  2022년 드론 해외진출 지원사업<br /><span
+                    >공모 안내서 공고</span
+                  >
+                </div>
+                <div class="moreIcon">MORE</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="noticeWrap">
+                <div class="noticeImg"></div>
+                <div class="noticeText">
+                  불편한 법 바꾸기<br /><span>국민 아이디어 공모제</span>
+                </div>
+                <div class="moreIcon">MORE</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="noticeWrap">
+                <div class="noticeImg"></div>
+                <div class="noticeText">
+                  2022년 ICAO 법률세미나<br /><span
+                    >국제민간항공기구-국토교통부 공동개최</span
+                  >
+                </div>
+                <div class="moreIcon">MORE</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <!-- popUP close -->
+        <div></div>
+      </div>
+
+      <!-- header swiper -->
+      <div class="headerSwiper">
+        <!-- header -->
+        <div class="header">
+          <div class="kiastImg"></div>
+          <div class="indexContainer">
+            <ul class="indexInfo">
+              <li class="tabMenu">소개</li>
+              <li class="tabMenu"><div class="logoImg"></div></li>
+              <li class="tabMenu">항공인증</li>
+              <li class="tabMenu">시험시설</li>
+              <li class="tabMenu">사고예방</li>
+              <li class="tabMenu">드론안전</li>
+              <li class="tabMenu">알림</li>
+              <li class="tabMenu">정보공개</li>
+            </ul>
+          </div>
+          <div class="menuContainer">
+            <ul class="menu">
+              <li><div class="home"></div></li>
+              <li><div class="lang"></div></li>
+              <li><div class="search"></div></li>
+              <li><div class="sitemap"></div></li>
+            </ul>
+            <div class="popupZone">
+              <div class="popupZoneImg"></div>
+            </div>
+          </div>
+          <!-- header에 따른 hover출력요소 -->
+          <div class="headerInfo1 tab1" style="display: none">
+            <div class="infoIntro">
+              <strong>소개</strong>
+              <p>
+                하늘, 사람, 미래를 생각하는 항공안전 전문기관으로
+                거듭나겠습니다.
+              </p>
+              <div class="IntroImg infoIntroImg1"></div>
+            </div>
+            <div class="menuWrap">
+              <div class="menuRow1">
+                <div class="menuList"><button>원장 인사말</button></div>
+                <div class="menuList"><button>비전</button></div>
+                <div class="menuList">
+                  <button>연혁</button>
+                  <a>연혁</a>
+                  <a>MOU현황</a>
+                </div>
+                <div class="menuList">
+                  <button>조직ㆍ직원안내</button>
+                  <a>조직도</a>
+                  <a>직원검색</a>
+                  <a>주요연락처</a>
+                </div>
+              </div>
+              <div class="menuRow2">
+                <div class="menuList"><button>CI소개</button></div>
+                <div class="menuList"><button>윤리경영</button></div>
+                <div class="menuList">
+                  <button>고객헌장</button>
+                  <a>고객헌장</a>
+                  <a>핵심서비스 이행표준</a>
+                  <a>고객응대 서비스 이행표준</a>
+                </div>
+                <div class="menuList"><button>찾아오시는길</button></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="headerInfo1 tab2" style="display: none;">
+            <div class="infoIntro">
+              <strong>KIASTORY</strong>
+              <p>
+                대한민국 유일 항공안전 전문기관 항공안전기술원입니다.
+              </p>
+              <div class="IntroImg infoIntroImg2"></div>
+            </div>
+            <div class="menuWrap">
+              <div class="menuRow1">
+                <div class="menuList"><button>KIAST DIAGEST</button></div>
+                <div class="menuList"><button>News</button>
+                  <a>기술원뉴스</a>
+                  <a>항공뉴스</a>
+                  <a>기관장동정</a>
+                </div>
+                <div class="menuList">
+                  <button>Archive</button>
+                  <a>사진</a>
+                  <a>동영상</a>
+                </div>
+                <div class="menuList">
+                  <button>K-UAM</button>
+                  <a>K-UAM Magazine</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="headerInfo1 tab3" style="display: none;">
+            <div class="infoIntro">
+              <strong>항공인증</strong>
+              <p>
+                항공기인증 및 검사로 하늘 위 항공 안전을 확보하고 책임집니다.
+              </p>
+              <div class="IntroImg infoIntroImg2"></div>
+            </div>
+            <div class="menuWrap">
+              <div class="menuRow1">
+                <div class="menuList">
+                  <button>항공기</button>
+                  <a>항공기인증</a>
+                  <a>신청프로세스</a>
+                  <a>항공인증시스템</a>
+                  <a>복합재료인증</a>
+                </div>
+                <div class="menuList">
+                  <button>경량항공기/초경량비행장치</button>
+                  <a>경량항공기</a>
+                  <a>초경량비행장치</a>
+                </div>
+                <div class="menuList">
+                  <button>항행안전시설</button>
+                  <a>항행안전시설 성능적합증명 검사</a>
+                  <a>신청프로세스</a>
+                </div>
+              </div>
+              <div class="menuRow2">
+                <div class="menuList">
+                  <button>항공보안장비</button>
+                  <a>신청 및 절차</a>
+                  <a>수수료</a>
+                  <a>FAQ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="headerInfo1 tab4" style="display: none;">
+            <div class="infoIntro">
+              <strong>시험시설</strong>
+              <p>
+                항공 전용 인프라를 구축하여 항공 산업발전에 기여합니다.
+              </p>
+              <div class="IntroImg infoIntroImg4"></div>
+            </div>
+            <div class="menuWrap">
+              <div class="menuRow1">
+                <div class="menuList">
+                  <button>국가종합비행시험인프라</button>
+                  <a>사업소개</a>
+                  <a>공지사항</a>
+                </div>
+                <div class="menuList">
+                  <button>드론전용비행시험장</button>
+                  <a>사업소개</a>
+                  <a>공지사항</a>
+                </div>
+                <div class="menuList"></div>
+                <div class="menuList"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="headerInfo1 tab5" style="display: none;">
+            <div class="infoIntro">
+              <strong>사고예방</strong>
+              <p>
+                항공안전기술을 통해 사전예방식 패러다임의 안전문화변화를 이끌어냅니다.
+              </p>
+              <div class="IntroImg infoIntroImg5"></div>
+            </div>
+            <div class="menuWrap">
+              <div class="menuRow1">
+                <div class="menuList">
+                  <button>통합데이터분석</button>
+                  <a>항공안전데이터분석</a>
+                  <a>항공안전감독정보분석</a>
+                </div>
+                <div class="menuList">
+                  <button>국제표준연구</button>
+                  <a>국제동향보고</a>
+                </div>
+                <div class="menuList"></div>
+                <div class="menuList"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="headerInfo1 tab6" style="display: none">
+            <div class="infoIntro">
+              <strong>드론안전</strong>
+              <p>
+                핵심유명산업인 드론 연구로 4차 산업혁명 시대를 선도하겠습니다.
+              </p>
+              <div class="IntroImg infoIntroImg6"></div>
+            </div>
+            <div class="menuWrap">
+              <div class="menuRow1">
+                <div class="menuList">
+                  <button>드론시범사업</button>
+                  <a>사업소개</a>
+                </div>
+                <div class="menuList">
+                  <button>드론교통관리</button>
+                  <a>사업소개</a>
+                  <a>추진전략</a>
+                </div>
+                <div class="menuList">
+                  <button>드론기업지원허브</button>
+                  <a>사업소개</a>
+                </div>
+                <div class="menuList">
+                  <button>드론정보포털</button>
+                </div>
+              </div>
+              <div class="menuRow2">
+                <div class="menuList"><button>공역예약</button></div>
+                <div class="menuList">
+                  <button>특별비행승인</button>
+                  <a>무인비행장치 특별비행승인</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="headerInfo1 tab7" style="display: none">
+            <div class="infoIntro">
+              <strong>알림</strong>
+              <p>
+                항공안전기술원의 주요소식 및 참여의 장을 제공합니다.
+              </p>
+              <div class="IntroImg infoIntroImg7"></div>
+            </div>
+            <div class="menuWrap">
+              <div class="menuRow1">
+                <div class="menuList">
+                  <button>공지사항</button>
+                  <a>공지사항</a>
+                  <a>입찰공고</a>
+                  <a>채용공고</a>
+                </div>
+                <div class="menuList">
+                  <button>묻고답하기</button>
+                </div>
+                <div class="menuList">
+                  <button>청렴KIAST</button>
+                </div>
+                <div class="menuList">
+                  <button>인사ㆍ채용비리 제보센터</button>
+                </div>
+              </div>
+              <div class="menuRow2">
+                <div class="menuList"><button>KIAST용어사전</button></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="headerInfo1 tab8" style="display: none">
+            <div class="infoIntro">
+              <strong>정보공개</strong>
+              <p>
+                정보공재제도에 따른 항공안전기술원의 정보를 공개합니다.
+              </p>
+              <div class="IntroImg infoIntroImg8"></div>
+            </div>
+            <div class="menuWrap">
+              <div class="menuRow1">
+                <div class="menuList">
+                  <button>정보공개제도 안내</button>
+                </div>
+                <div class="menuList">
+                  <button>정보공개목록</button>
+                </div>
+                <div class="menuList">
+                  <button>정보공개비공개대상정보</button>
+                </div>
+                <div class="menuList">
+                  <button>사전정보공개</button>
+                </div>
+              </div>
+              <div class="menuRow2">
+                <div class="menuList">
+                  <button>공공데이터개방</button>
+                </div>
+                <div class="menuList">
+                  <button>사업실명제</button>
+                </div>
+                <div class="menuList">
+                  <button>연구과제 목록</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ----------------------------------- -->
+        </div>
+
+        <!-- swiper img 비행기 드론 사진들 -->
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiperImgOne">
+                
+              </div>
+              <div class="airplaneOne"></div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiperImgTwo">
+                <div class="airplaneTwo"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiperImgThree">
+                <div class="airplaneThree"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-button-next2">NEXT</div>
+          <div class="swiper-button-prev swiper-button-prev2">PREV</div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- introduce -->
+      <div class="infoContainer">
+        <div class="infoWrap">
+          <div class="infoText">
+            <h2>WHAT<br />WE DO</h2>
+            <p>
+              항공안전기술원은 민간항공기 · 공항 · 항행시설 등에 대한
+              <br />
+              안전성 · 성능 등을 시험하고 인증하는 업무와
+              <br />
+              항공안전에 영향을 주는 결함 분석 및 첨단 항공기술의 개발과
+              <br />
+              표준화 등의 업무를 수행하고 있습니다.
+            </p>
+          </div>
+          <div class="infoImg">
+            <div class="line col1">
+              <div class="imgBox infoImg1">
+                <div class="infoSort">
+                  <div class="infoIcon1"></div>
+                  <span>무인비행<br />장치시범</span>
+                </div>
+              </div>
+            </div>
+            <div class="line col2">
+              <div class="imgBox infoImg2">
+                <div class="infoSort">
+                  <div class="infoIcon2"></div>
+                  <span>항공기인증</span>
+                </div>
+              </div>
+              <div class="imgBox infoImg3">
+                <div class="infoSort">
+                  <div class="infoIcon3"></div>
+                  <span>UTM사업</span>
+                </div>
+              </div>
+            </div>
+            <div class="line col3">
+              <div class="imgBox infoImg4">
+                <div class="infoSort">
+                  <div class="infoIcon4"></div>
+                  <span>안전성인증</span>
+                </div>
+              </div>
+              <div class="imgBox infoImg5">
+                <div class="infoSort">
+                  <div class="infoIcon5"></div>
+                  <span>드론기업<br />지원허브</span>
+                </div>
+              </div>
+            </div>
+            <div class="line col4">
+              <div class="imgBox infoImg6">
+                <div class="infoSort">
+                  <div class="infoIcon6"></div>
+                  <span>안전기술연구</span>
+                </div>
+              </div>
+              <div class="imgBox infoImg7">
+                <div class="infoSort">
+                  <div class="infoIcon7"></div>
+                  <span>공항항행인증</span>
+                </div>
+              </div>
+            </div>
+            <div class="line col5">
+              <div class="imgBox infoImg8">
+                <div class="infoSort">
+                  <div class="infoIcon8"></div>
+                  <span>항공보안장비</span>
+                </div>
+              </div>
+              <div class="imgBox infoImg9">
+                <div class="infoSort">
+                  <div class="infoIcon9"></div>
+                  <span>복합재료인증</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 바람개비 -->
+        <div class="vaneContainer"></div>
+        <div class="vaneContainer2"></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./mainPage.js"></script>
+  </body>
+</html>

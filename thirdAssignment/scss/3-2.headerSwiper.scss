@@ -1,0 +1,63 @@
+@import "mixin";
+
+.swiperImgOne {
+    
+    @include widthHeight(100%,100%);
+    @include flexSort(center,center);
+    background-image: url("../2headerImg/headerImg1.jpg");
+    background-position: center 26%;
+    background-size: auto;
+    background-attachment: fixed;
+    animation: up-down 1.4s infinite ease-in-out alternate;
+    
+}
+.airplaneOne {
+    @include widthHeight(709px,240px);
+    background-image: url("../2headerImg/centerLogo.png");
+    background-position: 0px 0px;
+    position:absolute;
+    top:170px
+}
+
+@keyframes up-down{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-20px);
+    }
+}
+
+.swiperImgTwo {
+    @include widthHeight(100%,100%);
+    @include flexSort(center,center);
+    background-image: url("../2headerImg/headerImg2.jpg");
+    background-position: center 26%;
+    background-size: auto;
+    background-attachment : fixed;
+
+    .airplaneTwo {
+        @include widthHeight(775px,240px);
+        background-image: url("../2headerImg/centerLogo.png");
+        background-position: -1472px 0px;
+        margin-bottom: auto;
+        margin-top:160px
+    }
+}
+
+.swiperImgThree {
+    @include widthHeight(100%,100%);
+    @include flexSort(center,center);
+    background-image: url("../2headerImg/headerImg3.jpg");
+    background-position: center 26%;
+    background-size: auto;
+    background-attachment : fixed;
+
+    .airplaneThree {
+        @include widthHeight(705px,240px);
+        background-image: url("../2headerImg/centerLogo.png");
+        background-position: -3085px 0px;
+        margin-bottom: auto;
+        margin-top:160px
+    }
+}

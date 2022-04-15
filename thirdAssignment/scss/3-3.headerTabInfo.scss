@@ -1,0 +1,169 @@
+@import "mixin";
+
+.headerInfo1 {
+  @include widthHeight(100%, 400px);
+  &.tab2{
+    @include widthHeight(100%, 370px);
+  }  
+  &.tab4{
+    @include widthHeight(100%, 370px);
+  }
+  &.tab5{
+    @include widthHeight(100%, 370px);
+  }
+  
+  @include flexSort($justify:center);
+  position: absolute;
+  top: 90px;
+  z-index: 2;
+  background-color: #f1f3f6;
+
+  .infoIntro {
+    @include widthHeight(283px,386px);
+    @include flexSort($direction: column);
+    
+    margin: 0 30px;
+    position: relative;
+    strong {
+      display: inline-block;
+      width: 120px;
+      @include fontFunc(nsr, 30px, #0c2d85);
+      line-height: 30px;
+      font-weight: 600;
+      margin-top: 35px;
+      padding-bottom: 10px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        @include widthHeight(21px, 1px);
+        background-color: #0c2d85;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    p {
+      width: 100%;
+      @include fontFunc(normal, 12px, #45474b);
+      line-height: 20px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .IntroImg {
+      @include widthHeight(185px, 107px);
+      background-image: url("../2headerImg/headerIcon.png");
+      position: absolute;
+      bottom: 45px;
+      left: 0px;
+    }
+    .infoIntroImg1 {
+      background-position: -1px -315px;
+    }
+    .infoIntroImg2 {
+      background-position: -273px -315px;
+    }
+    .infoIntroImg3 {
+      background-position: -545px -315px;
+    }
+    .infoIntroImg4 {
+      background-position: -817px -315px;
+    }
+    .infoIntroImg5 {
+      background-position: -1089px -315px;
+    }
+    .infoIntroImg6 {
+      background-position: -1361px -315px;
+    }
+    .infoIntroImg7 {
+      background-position: -1633px -315px;
+    }
+    .infoIntroImg8 {
+      background-position: -1905px -315px;
+    }
+  }
+  .menuWrap {
+    @include widthHeight(auto, 100%);
+    @include flexSort($direction:column);
+    margin-top:30px;
+    .menuRow1 {
+      @include widthHeight(100%, 133px);
+      @include flexSort(center, flex-start, row);
+    }
+    .menuRow2 {
+      @include widthHeight(100%, 133px);
+      @include flexSort(center, flex-start, row);
+      margin-top:30px;
+    }
+    .menuList {
+      @include widthHeight(180px, 133px);
+      @include flexSort($direction: column);
+      margin-right: 20px;
+
+      button {
+        @include widthHeight(180px, 46px);
+        @include fontFunc(normal, 13px, #07378e);
+        font-weight: 600;
+        border: #0c2d85 solid 1px;
+        background-color: #f1f3f6;
+        padding: 12px 20px 12px 10px;
+        box-sizing: border-box;
+        position: relative;
+        text-align: left;
+
+        &::after {
+          content: "";
+          @include widthHeight(9px, 5px);
+          background-image: url("../2headerImg/headerIcon.png");
+          background-position: -310px -90px;
+          position: absolute;
+          top: 50%;
+          right: 10px;
+        }
+
+        &:hover {
+          background-color: #0c2d85;
+          color: #fff;
+
+          &::after {
+            background-position: -310px -82px;
+          }
+        }
+      }
+      a {
+    
+          @include fontFunc(normal, 14px, #4d4d4e);
+          line-height: 18px;
+          padding: 4px 0 4px 22px;
+          position: relative;
+
+          &::before{
+              content: "";
+              @include widthHeight(3px,3px);
+              background-color: #aeaeaf;
+              position: absolute;
+              top:50%;
+              left: 15px;
+          }
+
+          &:hover {
+            color:#0c2d85;
+            text-decoration: underline;
+            &::before{
+               
+                background-color: #0c2d85;
+            }
+          }
+      }
+    }
+  }
+}
+
+.tab3 {
+  .menuList{
+    width: 250px !important;
+    button {
+      width: 250px !important;
+    }
+  }
+}
