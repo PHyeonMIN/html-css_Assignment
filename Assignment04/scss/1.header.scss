@@ -19,9 +19,11 @@
     box-sizing: border-box;
 
     .logo {
-      @include widthHeight(100px, 30px);
-      background-image: url(../img/logo.png);
-      background-size: 100%;
+      max-width: 100px;
+      @include widthHeight(100%, 30px);
+      img {
+        @include widthHeight(100%,100%);
+      } 
     }
     .search {
       @include widthHeight(260px, 36px);
