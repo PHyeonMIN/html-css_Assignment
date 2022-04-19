@@ -15,5 +15,5 @@
 <br>
 #### fourthAssignment
    2022-04-18 ~ 2022-04-19 : 인스타그램 copy + html/sass + @media + modal  
-   피드백내용 : sass파일 잘 나눌 것(너무 많이 나눔) , 사이트가 안좋음  
+   피드백내용 : 
 <br>
