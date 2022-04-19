@@ -17,24 +17,33 @@
   @include widthHeight(100%, 180px);
   @include flex(center, space-evenly);
   margin-bottom: 44px;
-  &Img { // .profileImg
-    @include widthHeight(300px, 150px);
+  &Img {
+    // .profileImg
+    @include widthHeight(300px, 100%);
     @include flex(center, center);
-    img {
-      @include widthHeight(150px, 150px);
-      background-position: center;
-      background-size: 100%;
+    .profileImgcover {
+      @include widthHeight(160px,160px);
+      @include flex(center,center);
+      background-color: #fff;
       border-radius: 50%;
+      border: 1px solid #dbdbdb;
+      img {
+        @include widthHeight(150px, 150px);
+        background-position: center;
+        background-size: 100%;
+        border-radius: 50%;
+      }
     }
   }
 
-  &Info {  // .profileInfo
+  &Info {
+    // .profileInfo
     @include widthHeight(100%, 100%);
     @include flex(center, flex-start, column);
 
     .profileMain {
       @include widthHeight(100%, auto);
-      @include flex(center, $direction: row);
+      @include flex(stretch,flex-start,row);
       margin-bottom: 20px;
       .nameContainer {
         @include flex(center, center, row);
@@ -62,7 +71,7 @@
       }
     }
     .profileInfoNum {
-      @include widthHeight(100%, 100%);
+      @include widthHeight(100%, 70%);
       @include flex($direction: row);
       li {
         margin-right: 40px;
@@ -89,6 +98,25 @@
   display: none;
 }
 
+.storyWrap {
+  @include widthHeight(100%,auto);
+  @include flex(center,flex-start,row);
+  margin-bottom: 44px;
+  li {
+    @include flex(center,center, column);
+    margin-left: 30px;
+    img {
+      @include widthHeight(77px,77px);
+      border-radius: 50%;
+      padding: 3px;
+      border: 1px solid #dbdbdb;
+    }
+    span{
+      margin-top:6px;
+    }
+  }
+}
+
 @media screen and (max-width: 740px) {
   .main {
     .contents {
@@ -99,10 +127,13 @@
   .profile {
     @include widthHeight(auto, auto);
     margin: 16px;
-    &Img { // .profileImg
-      @include widthHeight(82px, 77px);
+    &Img {
+      // .profileImg
+      @include widthHeight(100px, 77px);
       @include flex(center, center);
       margin-right: 30px;
+      .profileImgcover{
+        @include widthHeight(67px,67px);
       img {
         @include widthHeight(77px, 77px);
         background-position: center;
@@ -111,11 +142,13 @@
         box-sizing: border-box;
       }
     }
+    }
 
-    &Info {  // .profileInfo
+    &Info {
+      // .profileInfo
       box-sizing: border-box;
       .profileMain {
-        @include flex(center, flex-start, column);
+        @include flex(stretch, flex-start, column);
         margin-bottom: 0px;
         .nameContainer {
           justify-content: flex-start;
@@ -123,8 +156,8 @@
           margin-bottom: 5px;
         }
         .buttonContainer {
-          justify-content: flex-start;
           width: 100%;
+          max-width: 250px;
           .followButton {
             width: 200px;
             margin-left: 0;
@@ -161,4 +194,21 @@
       }
     }
   }
+  .storyWrap {
+    margin-bottom: 21px;
+    li {
+      margin-left: 10px;
+      img {
+        @include widthHeight(56px,56px);
+        border-radius: 50%;
+        padding: 3px;
+        border: 1px solid #dbdbdb;
+      }
+      span{
+        margin-top:3px;
+      }
+    }
+  }
+
+
 }
