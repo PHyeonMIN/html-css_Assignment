@@ -1,84 +1,82 @@
-@import 'setting';
-@import 'mixin';
+@import "setting";
+@import "mixin";
 
 .header {
-    @include widthHeight(100%, 60px);
-    @include flex(center,center);
-    border-bottom: 1px solid #dbdbdb;
-    .headerWrap{
+  @include widthHeight(100%, 60px);
+  @include flex(center, center);
+  border-bottom: 1px solid #dbdbdb;
+  .headerWrap {
     max-width: 975px;
-    @include widthHeight(100%,100%);
+    @include widthHeight(100%, 100%);
     padding: 0 20px;
-    @include flex(center, space-between,row);
+    @include flex(center, space-between, row);
     background-color: #fff;
-    
-    position:sticky;
-    top:0;
+
+    position: sticky;
+    top: 0;
     z-index: 2;
     padding: 0 18px;
     box-sizing: border-box;
 
     .logo {
-        @include widthHeight(100px,30px);
-        background-image: url(../img/logo.png);
-        background-size: 100%;
+      @include widthHeight(100px, 30px);
+      background-image: url(../img/logo.png);
+      background-size: 100%;
     }
     .search {
-        @include widthHeight(260px,36px);
-        @include flex(center);
+      @include widthHeight(260px, 36px);
+      @include flex(center);
+      background-color: #efefef;
+      border-radius: 8px;
+
+      .searchIcon {
+        @include widthHeight(16px, 16px);
+        background-image: url("../img/searchIcon.png");
+        background-size: 100%;
+        margin-left: 16px;
+      }
+
+      input {
+        border: 0;
+        outline: 0;
         background-color: #efefef;
-        border-radius: 8px;
-
-        .searchIcon {
-            @include widthHeight(16px,16px);
-            background-image: url("../img/searchIcon.png");
-            background-size: 100%;
-            margin-left: 16px;
-        }
-
-        input {
-            
-            border: 0;
-            outline: 0;
-            background-color: #efefef;
-            padding:0 16px;
-            @include font(normal,16px,#8e8e8e);
-        }
-
-
+        padding: 0 16px;
+        @include font(normal, 16px, #8e8e8e);
+      }
     }
 
     .buttonContainer {
-        @include widthHeight(150px,30px);
-        @include flex(center,space-evenly);
+      @include widthHeight(150px, 30px);
+      @include flex(center, space-evenly);
 
+      .login {
+        @include widthHeight(62px, 30px);
+        background-color: #0095f6;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        @include font(normal, 14px, #fff);
+        font-weight: 600;
+        cursor: pointer;
+      }
 
-        .login {
-            @include widthHeight(62px,30px);
-            background-color: #0095f6;
-            border : 1px solid transparent;
-            border-radius: 4px;
-            @include font(normal, 14px, #fff);
-            font-weight: 600;
-            cursor: pointer;
-        }
-        
-        .join {
-            @include widthHeight(62px,30px);
-            background-color: #fff;
-            border : 1px solid transparent;
-            border-radius: 4px;
-            @include font(normal, 14px, #0095f6);
-            cursor: pointer;
-        }
+      .join {
+        @include widthHeight(62px, 30px);
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        @include font(normal, 14px, #0095f6);
+        cursor: pointer;
+      }
     }
-}
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .header{
-        .search {
-            display:none;
-        }
+  .header {
+    .headerWrap {
+      .search {
+        display: none;
+      }
     }
+  }
 }
