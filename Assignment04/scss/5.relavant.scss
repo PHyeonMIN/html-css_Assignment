@@ -1,0 +1,94 @@
+@import 'mixin';
+.relavantContainer {    
+    @include widthHeight(100%,280px);
+    @include flex(center,center,column);
+    background-color: #fff;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    .relavantHead {
+        @include widthHeight(100%,auto);
+        @include flex(center,space-between,row);
+        margin: 0 24px 12px 24px;
+
+        span {
+            @include font(normal, 14px, #8e8e8e);
+            font-weight: 600;
+        }
+        div {
+            @include font(normal, 14px, #0095f6);
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+
+    .recommand {
+        @include widthHeight(100%,100%);
+        @include flex(center,flex-start,row);
+        .rcmList {
+            @include widthHeight(130px,170px);
+            @include flex(center,center,column);
+            padding: 20px;
+
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            position:relative;
+            margin:0 10px;
+            &:first-child{
+                margin-left:0px;
+            }
+            .rcmCloseBtn{
+                @include widthHeight(10px,10px);
+                background-image: url("../img/closeIcon.png");
+                background-size: 100%;
+                position:absolute;
+                right: 8px;
+                top:8px;
+                cursor: pointer;
+            }
+            .rcmImg{
+                @include widthHeight(54px,54px);
+                
+                img {
+                    @include widthHeight(100%,100%);
+                    border-radius: 50%;
+                }
+            }
+            .rcmNick {
+                @include font(normal, 14px, #262626);
+                font-weight: 600;
+                margin-top: 20px;
+            }
+            .rcmName {
+                @include font(normal, 14px, #8c8e8c);
+                font-weight: 400;
+                margin-bottom: 12px;
+            }
+            .followBtn {
+                @include widthHeight(62px,30px);
+                background-color: #0095f6;
+                border : 1px solid transparent;
+                border-radius: 4px;
+                @include font(normal, 14px, #fff);
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .relavantContainer{
+        
+            .recommand{
+                .rcmList {
+                    margin:0 2px;
+
+                    .rcmImg{
+                        @include widthHeight(77px,77px);
+                    }
+                }
+            }
+        
+    }
+
+}

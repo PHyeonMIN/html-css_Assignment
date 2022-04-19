@@ -1,0 +1,164 @@
+@import "mixin";
+
+.main {
+  @include widthHeight(100%, 100%);
+
+  background-color: #fafafa;
+  .contents {
+    @include widthHeight(auto, 100%);
+    margin: 0 auto;
+    padding: 30px 20px 0;
+    max-width: 935px;
+    box-sizing: border-box;
+  }
+}
+
+.profile {
+  @include widthHeight(100%, 180px);
+  @include flex(center, space-evenly);
+  margin-bottom: 44px;
+  &Img { // .profileImg
+    @include widthHeight(300px, 150px);
+    @include flex(center, center);
+    img {
+      @include widthHeight(150px, 150px);
+      background-position: center;
+      background-size: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &Info {  // .profileInfo
+    @include widthHeight(100%, 100%);
+    @include flex(center, flex-start, column);
+
+    .profileMain {
+      @include widthHeight(100%, auto);
+      @include flex(center, $direction: row);
+      margin-bottom: 20px;
+      .nameContainer {
+        @include flex(center, center, row);
+        .profileName {
+          @include font(normal, 28px, #262626);
+          font-weight: 300;
+          line-height: 32px;
+        }
+        .confirmIcon {
+          @include widthHeight(18px, 18px);
+          background-image: url("../img/instagramIcon.png");
+          background-position: 0 -369px;
+          margin-left: 8px;
+        }
+      }
+      .followButton {
+        @include widthHeight(62px, 30px);
+        background-color: #0095f6;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        @include font(normal, 14px, #fff);
+        font-weight: 600;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+    }
+    .profileInfoNum {
+      @include widthHeight(100%, 100%);
+      @include flex($direction: row);
+      li {
+        margin-right: 40px;
+
+        span {
+          color: #262626;
+          font-weight: 600;
+        }
+      }
+    }
+    .profileIntro {
+      @include widthHeight(100%, 100%);
+      @include flex($direction: column);
+      span {
+        color: #262626;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.profileIntro2,
+.profileInfoNum2 {
+  display: none;
+}
+
+@media screen and (max-width: 740px) {
+  .main {
+    .contents {
+      padding: 0px;
+      padding-top: 16px;
+    }
+  }
+  .profile {
+    @include widthHeight(auto, auto);
+    margin: 16px;
+    &Img { // .profileImg
+      @include widthHeight(82px, 77px);
+      @include flex(center, center);
+      margin-right: 30px;
+      img {
+        @include widthHeight(77px, 77px);
+        background-position: center;
+        background-size: 100%;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+    }
+
+    &Info {  // .profileInfo
+      box-sizing: border-box;
+      .profileMain {
+        @include flex(center, flex-start, column);
+        margin-bottom: 0px;
+        .nameContainer {
+          justify-content: flex-start;
+          width: 100%;
+          margin-bottom: 5px;
+        }
+        .buttonContainer {
+          justify-content: flex-start;
+          width: 100%;
+          .followButton {
+            width: 200px;
+            margin-left: 0;
+          }
+        }
+      }
+      .profileInfoNum {
+        display: none;
+      }
+      .profileIntro {
+        display: none;
+      }
+    }
+  }
+  .profileIntro2 {
+    @include flex(stretch, center, column);
+    padding: 0 16px;
+    padding-bottom: 21px;
+    span {
+      font-weight: 600;
+    }
+  }
+  .profileInfoNum2 {
+    @include widthHeight(100%, 61px);
+    @include flex(center, space-around, row);
+    border-top: 1px solid #dbdbdb;
+    li {
+      @include flex(center, center, column);
+      @include font(normal, 14px, #8e8e8e);
+      font-weight: 400;
+      span {
+        @include font(normal, 14px, #262626);
+        font-weight: 600;
+      }
+    }
+  }
+}

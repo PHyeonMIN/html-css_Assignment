@@ -1,0 +1,30 @@
+@import 'mixin';
+
+.footer {
+    @include widthHeight(100%,150px);
+    @include flex(center,center,column);
+
+    .footHelp {
+        @include widthHeight(100%,auto);
+        @include flex(center,center,row);
+        flex-wrap: wrap;
+
+        li{
+            margin: 0 8px 8px 12px;
+            @include font(normal,12px,#8e8e8e);
+            font-weight: 400;
+            line-height: 16px;
+        }
+    }
+    .lang {
+        @include widthHeight(100%,auto);
+        @include flex(center,center,row);
+        margin: 0 8px 8px 12px;
+        @include font(normal,12px,#8e8e8e);
+        font-weight: 400;
+        line-height: 16px;
+        div{
+        margin-right:8px;
+    }
+    }
+}

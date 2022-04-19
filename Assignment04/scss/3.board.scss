@@ -1,0 +1,333 @@
+@import "mixin";
+
+.board {
+  @include widthHeight(100%, 100%);
+  @include flex(center, center, column);
+
+  .boardOrder {
+    @include widthHeight(100%, 52px);
+    @include flex(center, center, row);
+    border-top: 1px solid #dbdbdb;
+    .tab {
+      @include widthHeight(auto, 100%);
+      @include flex(center, center);
+      @include font(normal, 12px, #262626);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+
+      span {
+        display: inline;
+        margin-left: 8px;
+      }
+      &.active {
+        border-top: 1px solid #262626;
+      }
+    }
+  }
+
+  .listItemContainer {
+    @include widthHeight(100%, 100%);
+    @include flex(center, center, column);
+
+    .listItem {
+      @include widthHeight(100%, 100%);
+      @include flex(center, space-between, row);
+      margin-bottom: 28px;
+
+      .listImg {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        .innerBox {
+          width: 100%;
+          padding-bottom: 100%;
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+          .imgInfo {
+            display: none;
+            @include widthHeight(100%, 100%);
+
+            flex-wrap: wrap;
+            position: absolute;
+            z-index: 2;
+
+            color: #fff;
+            font-weight: 600;
+            .playCount {
+              @include flex(center, center);
+              margin-right: 20px;
+              .playIcon {
+                @include widthHeight(19px, 19px);
+                background-image: url("../img/instagramIcon.png");
+                background-position: -361px -333px;
+                margin-right: 8px;
+              }
+            }
+            .commentCount {
+              @include flex(center, center);
+              .commentIcon {
+                @include widthHeight(19px, 19px);
+                background-image: url("../img/instagramIcon.png");
+                background-position: -382px -333px;
+                margin-right: 8px;
+              }
+            }
+          }
+          &:hover {
+            .imgInfo {
+              @include flex(center, center);
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              @include widthHeight(100%, 100%);
+              background-color: rgba(0, 0, 0, 0.3);
+              z-index: 1;
+            }
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 28px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .videoContainer {
+    display: none;
+  }
+
+  .modal {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include flex(center, center);
+
+    &.hidden {
+      display: none;
+    }
+
+    .modalOverlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .modalContent {
+      @include flex(center, center, column);
+      h2 {
+        z-index: 3;
+        @include font(normal, 14px, #fff);
+        font-weight: 600;
+        line-height: 18px;
+        text-align: center;
+      }
+      .loginBox {
+        @include flex(center, center, column);
+        background-color: white;
+        position: relative;
+        border-radius: 10px;
+        width: 100%;
+        margin: 20px;
+        .closeIcon {
+          @include widthHeight(18px, 18px);
+          background-image: url("../img/closeIcon.png");
+          background-size: 100%;
+          position: absolute;
+          right: 8px;
+          top: 8px;
+          cursor: pointer;
+        }
+        .instaIcon {
+          @include widthHeight(175px, 51px);
+          background-image: url("../img/logo.png");
+          background-size: 100%;
+          margin-top: 50px;
+          margin-bottom: 18px;
+        }
+        .formContainer {
+          @include widthHeight(auto, 100%);
+          @include flex(center, center, column);
+
+          .id,
+          .pw {
+            @include widthHeight(auto, 36px);
+            @include font(normal, 12px, #8e8e8e);
+            margin: 0 40px 6px;
+
+            input {
+              width: 260px;
+              background-color: #fafafa;
+              border: 0;
+              overflow: hidden;
+              padding: 9px 0 7px 8px;
+              border: 1px solid #dbdbdb;
+            }
+          }
+          button {
+            width: 270px;
+            height: 30px;
+            background-color: rgba(var(--d69, 0, 149, 246), 0.3);
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font-family: normal;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 600;
+            margin: 8px 40px;
+          }
+        }
+        .orBox {
+          @include widthHeight(100%, auto);
+          @include font(normal, 13px, #8e8e8e);
+          font-weight: 600;
+          line-height: 15px;
+          text-align: center;
+          position: relative;
+          margin-top: 10px;
+          margin-bottom: 40px;
+          &::before {
+            content: "";
+            @include widthHeight(104px, 1px);
+            background-color: #dbdbdb;
+            position: absolute;
+            left: 66px;
+            top: 6px;
+          }
+          &::after {
+            content: "";
+            @include widthHeight(104px, 1px);
+            background-color: #dbdbdb;
+            position: absolute;
+            right: 66px;
+            bottom: 6px;
+          }
+        }
+
+        .byFacebook {
+          @include widthHeight(100%, auto);
+          @include flex(center, center, row);
+          .facebookIcon {
+            @include widthHeight(16px, 16px);
+            background-image: url("../img/facebookIcon.png");
+            background-size: 100%;
+            margin-right: 8px;
+          }
+          @include font(normal, 14px, #385185);
+          font-weight: 600;
+        }
+
+        .lostPassword {
+          text-align: center;
+          @include font(normal, 12px, #385185);
+          line-height: 16px;
+          margin-top: 20px;
+          margin-bottom: 24px;
+        }
+
+        .doJoin {
+          @include widthHeight(100%, 41px);
+          @include flex(center, center);
+          padding-top: 10px;
+          padding-bottom: 20px;
+          @include font(normal, 14px, #262626);
+          text-align: center;
+          border-top: 1px solid #dbdbdb;
+          position: relative;
+          a {
+            @include font(normal, 14px, #0095f6);
+            font-weight: 600;
+          }
+
+          &::after {
+            content: "";
+            width: 360px;
+            height: 1px;
+            background-color: #dbdbdb;
+            position: absolute;
+            bottom: 10px;
+            left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .board {
+    .boardOrder {
+      @include flex(center, space-around, row);
+      .tab {
+        cursor: pointer;
+        img {
+          @include widthHeight(30px, 30px);
+          margin: 0px;
+        }
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+        span {
+          display: none;
+        }
+        &.active {
+          @include widthHeight(28px, 28px);
+          border: 0px;
+          svg {
+            color: rgb(0, 149, 246);
+            fill: rgb(0, 149, 246);
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .listItemContainer {
+      .listItem {
+        margin-bottom: 2px;
+        .listImg {
+          &:not(:last-child) {
+            margin-right: 2px;
+          }
+          .innerBox {
+            &:hover {
+              .imgInfo {
+                @include flex(center, center, column);
+              }
+            }
+            .imgInfo {
+              .playCount {
+                margin-right: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

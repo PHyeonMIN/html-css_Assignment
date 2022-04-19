@@ -1,0 +1,315 @@
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.main .contents {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 20px 0;
+  max-width: 935px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.profile {
+  width: 100%;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 44px;
+}
+
+.profileImg {
+  width: 300px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profileImg img {
+  width: 150px;
+  height: 150px;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 50%;
+}
+
+.profileInfo {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profileInfo .profileMain {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.profileInfo .profileMain .nameContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profileInfo .profileMain .nameContainer .profileName {
+  font-family: normal;
+  font-size: 28px;
+  color: #262626;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.profileInfo .profileMain .nameContainer .confirmIcon {
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/instagramIcon.png");
+  background-position: 0 -369px;
+  margin-left: 8px;
+}
+
+.profileInfo .profileMain .followButton {
+  width: 62px;
+  height: 30px;
+  background-color: #0095f6;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: normal;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.profileInfo .profileInfoNum {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profileInfo .profileInfoNum li {
+  margin-right: 40px;
+}
+
+.profileInfo .profileInfoNum li span {
+  color: #262626;
+  font-weight: 600;
+}
+
+.profileInfo .profileIntro {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profileInfo .profileIntro span {
+  color: #262626;
+  font-weight: 600;
+}
+
+.profileIntro2,
+.profileInfoNum2 {
+  display: none;
+}
+
+@media screen and (max-width: 740px) {
+  .main .contents {
+    padding: 0px;
+    padding-top: 16px;
+  }
+  .profile {
+    width: auto;
+    height: auto;
+    margin: 16px;
+  }
+  .profileImg {
+    width: 82px;
+    height: 77px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 30px;
+  }
+  .profileImg img {
+    width: 77px;
+    height: 77px;
+    background-position: center;
+    background-size: 100%;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .profileInfo {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .profileInfo .profileMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0px;
+  }
+  .profileInfo .profileMain .nameContainer {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .profileInfo .profileMain .buttonContainer {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  .profileInfo .profileMain .buttonContainer .followButton {
+    width: 200px;
+    margin-left: 0;
+  }
+  .profileInfo .profileInfoNum {
+    display: none;
+  }
+  .profileInfo .profileIntro {
+    display: none;
+  }
+  .profileIntro2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 16px;
+    padding-bottom: 21px;
+  }
+  .profileIntro2 span {
+    font-weight: 600;
+  }
+  .profileInfoNum2 {
+    width: 100%;
+    height: 61px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-top: 1px solid #dbdbdb;
+  }
+  .profileInfoNum2 li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: normal;
+    font-size: 14px;
+    color: #8e8e8e;
+    font-weight: 400;
+  }
+  .profileInfoNum2 li span {
+    font-family: normal;
+    font-size: 14px;
+    color: #262626;
+    font-weight: 600;
+  }
+}

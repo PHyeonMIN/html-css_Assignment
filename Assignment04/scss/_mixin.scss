@@ -1,0 +1,26 @@
+@mixin widthHeight($width:null, $height:null) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($align:null , $justify:null , $direction:null) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin font($family, $size, $color) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin hidden(){
+    width: 0;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    margin-left: -1px;
+    margin-top:  -1px;
+}

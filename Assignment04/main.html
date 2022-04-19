@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="./css/1.header.css" />
+    <link rel="stylesheet" href="./css/2.profile.css" />
+    <link rel="stylesheet" href="./css/3.board.css" />
+    <link rel="stylesheet" href="./css/4.footer.css" />
+    <link rel="stylesheet" href="./css/5.relavant.css" />
+  </head>
+  <body>
+    <!-- 인스타 헤더 -->
+
+    <header class="header">
+      <div class="headerWrap">
+        <div class="logo"></div>
+        <label class="search">
+          <div class="searchIcon"></div>
+          <input type="text" placeholder="검색" />
+        </label>
+        <div class="buttonContainer">
+          <button class="login">로그인</button>
+          <button class="join">가입하기</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="contents">
+        <!-- 프로필 -->
+        <section class="profile">
+          <div class="profileImg">
+            <img src="./img/profileImg.jpg" />
+          </div>
+          <div class="profileInfo">
+            <div class="profileMain">
+              <div class="nameContainer">
+                <h2 class="profileName">뚱이</h2>
+                <div class="confirmIcon"></div>
+              </div>
+              <div class="buttonContainer">
+                <button class="followButton">팔로우</button>
+              </div>
+            </div>
+            <ul class="profileInfoNum">
+              <li>게시물 <span>628</span></li>
+              <li>팔로워 <span>25.8백만</span></li>
+              <li>팔로우 <span>111</span></li>
+            </ul>
+            <div class="profileIntro">
+              <span>뚱인데요</span>
+              <div>hello world!</div>
+              <a href="#">https://www.youtube.com</a>
+            </div>
+          </div>
+        </section>
+        <!-- 미디어쿼리 적용식 사용되는 div -->
+        <div class="profileIntro2"></div>
+        <ul class="profileInfoNum2"></ul>
+        <!-- 게시물 -->
+        <section class="board">
+          <ul class="boardOrder">
+            <li onclick="tabChange(0)" class="tab active">
+              <svg
+                aria-label=""
+                class="_8-yf5"
+                color="#262626"
+                fill="#262626"
+                height="12"
+                role="img"
+                viewBox="0 0 24 24"
+                width="12"
+              >
+                <rect
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  width="18"
+                  x="3"
+                  y="3"
+                ></rect>
+                <line
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="9.015"
+                  x2="9.015"
+                  y1="3"
+                  y2="21"
+                ></line>
+                <line
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="14.985"
+                  x2="14.985"
+                  y1="3"
+                  y2="21"
+                ></line>
+                <line
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="21"
+                  x2="3"
+                  y1="9.015"
+                  y2="9.015"
+                ></line>
+                <line
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  x1="21"
+                  x2="3"
+                  y1="14.985"
+                  y2="14.985"
+                ></line>
+              </svg>
+              <span>게시물</span>
+            </li>
+            <li onclick="tabChange(1)" class="tab">
+              <svg
+                aria-label=""
+                class="_8-yf5"
+                color="#8e8e8e"
+                fill="#8e8e8e"
+                height="12"
+                role="img"
+                viewBox="0 0 24 24"
+                width="12"
+              >
+                <path
+                  d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22.5C6.2 22.5 1.5 17.8 1.5 12S6.2 1.5 12 1.5 22.5 6.2 22.5 12 17.8 22.5 12 22.5zm5-11.8l-6.8-3.9c-.5-.3-1-.3-1.5 0-.4.3-.7.7-.7 1.3v7.8c0 .5.3 1 .8 1.3.2.1.5.2.8.2s.5-.1.8-.2l6.8-3.9c.5-.3.8-.8.8-1.3s-.5-1-1-1.3zm-7.5 5.2V8.1l6.8 3.9-6.8 3.9z"
+                ></path>
+              </svg>
+              <span>동영상</span>
+            </li>
+            <li onclick="tabChange(2)" class="tab">
+              <svg
+                aria-label=""
+                class="_8-yf5"
+                color="#8e8e8e"
+                fill="#8e8e8e"
+                height="12"
+                role="img"
+                viewBox="0 0 24 24"
+                width="12"
+              >
+                <path
+                  d="M10.201 3.797L12 1.997l1.799 1.8a1.59 1.59 0 001.124.465h5.259A1.818 1.818 0 0122 6.08v14.104a1.818 1.818 0 01-1.818 1.818H3.818A1.818 1.818 0 012 20.184V6.08a1.818 1.818 0 011.818-1.818h5.26a1.59 1.59 0 001.123-.465z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+                <path
+                  d="M18.598 22.002V21.4a3.949 3.949 0 00-3.948-3.949H9.495A3.949 3.949 0 005.546 21.4v.603"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+                <circle
+                  cx="12.072"
+                  cy="11.075"
+                  fill="none"
+                  r="3.556"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></circle>
+              </svg>
+              <span>태그됨</span>
+            </li>
+          </ul>
+
+          <!-- 
+            1. width height를 화면에 따라 변경하고 싶으면
+            padding-bottom:100%를 줘서 공간을 줘야한다 height조절x
+            지금 innerbox를 넣은 이유는 width가 280px이 100%인 box를 만들어주기 위해 생성
+            ( dom구조가 안좋아짐 -> grid를 사용했다면 더 좋았을 것! ) 
+
+            2. div background-image보단 img태그 사용할 것
+           -->
+          <div class="listItemContainer tab1">
+            <div class="listItem">
+              <div class="listImg">
+                <div class="innerBox">
+                  <img src="profileImg/1.jpg" alt="" />
+                  <div class="imgInfo">
+                    <div class="playCount">
+                      <div class="playIcon"></div>
+                      3.6백만
+                    </div>
+                    <div class="commentCount">
+                      <div class="commentIcon"></div>
+                      9,876
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listImg">
+                <div class="innerBox">
+                  <img src="profileImg/2.jpg" alt="" />
+                  <div class="imgInfo">
+                    <div class="playCount">
+                      <div class="playIcon"></div>
+                      3.6백만
+                    </div>
+                    <div class="commentCount">
+                      <div class="commentIcon"></div>
+                      9,876
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listImg">
+                <div class="innerBox">
+                  <img src="profileImg/3.jpg" alt="" />
+                  <div class="imgInfo">
+                    <div class="playCount">
+                      <div class="playIcon"></div>
+                      3.6백만
+                    </div>
+                    <div class="commentCount">
+                      <div class="commentIcon"></div>
+                      9,876
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="listItem">
+              <div class="listImg">
+                <div class="innerBox">
+                  <img src="profileImg/4.jpg" alt="" />
+                  <div class="imgInfo">
+                    <div class="playCount">
+                      <div class="playIcon"></div>
+                      3.6백만
+                    </div>
+                    <div class="commentCount">
+                      <div class="commentIcon"></div>
+                      9,876
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listImg">
+                <div class="innerBox">
+                  <img src="profileImg/5.jpg" alt="" />
+                  <div class="imgInfo">
+                    <div class="playCount">
+                      <div class="playIcon"></div>
+                      3.6백만
+                    </div>
+                    <div class="commentCount">
+                      <div class="commentIcon"></div>
+                      9,876
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="listImg">
+                <div class="innerBox">
+                  <img src="profileImg/6.jpg" alt="" />
+                  <div class="imgInfo">
+                    <div class="playCount">
+                      <div class="playIcon"></div>
+                      3.6백만
+                    </div>
+                    <div class="commentCount">
+                      <div class="commentIcon"></div>
+                      9,876
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 비디오 탭 -->
+          <div class="videoContainer tab2">비디오</div>
+          <!-- 모달창 탭 -->
+          <div class="modal hidden tab3">
+            <div class="modalOverlay"></div>
+            <div class="modalContent">
+              <h2>로그인하여 Instagram에서 여러분의 세상과 연결해보세요</h2>
+              <div class="loginBox">
+                <div class="closeIcon"></div>
+                <div class="instaIcon"></div>
+                <form class="formContainer">
+                  <label class="id">
+                    <input
+                      type="text"
+                      placeholder="전화번호,사용자 이름 또는 이메일"
+                    />
+                  </label>
+                  <label class="pw">
+                    <input type="password" placeholder="비밀번호" />
+                  </label>
+                  <button>로그인</button>
+                </form>
+                <div class="orBox">또는</div>
+                <div class="byFacebook">
+                  <div class="facebookIcon"></div>
+                  Facebook으로 로그인
+                </div>
+                <div class="lostPassword">비밀번호를 잊으셨나요?</div>
+                <div class="doJoin">계정없으신가요? <a>가입하기</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- relavant -->
+        <section class="relavantContainer">
+          <div class="relavantHead">
+            <span>관련 계정</span>
+            <div>모두 보기</div>
+          </div>
+          <div class="recommand">
+            <div class="rcmList">
+              <div class="rcmCloseBtn"></div>
+              <div class="rcmImg">
+                <img src="./profileImg/1.jpg" />
+              </div>
+              <div class="rcmNick">뚱</div>
+              <div class="rcmName">뚱이</div>
+              <button class="followBtn">팔로우</button>
+            </div>
+            <div class="rcmList">
+              <div class="rcmCloseBtn"></div>
+              <div class="rcmImg">
+                <img src="./profileImg/1.jpg" />
+              </div>
+              <div class="rcmNick">뚱</div>
+              <div class="rcmName">뚱이</div>
+              <button class="followBtn">팔로우</button>
+            </div>
+            <div class="rcmList">
+              <div class="rcmCloseBtn"></div>
+              <div class="rcmImg">
+                <img src="./profileImg/1.jpg" />
+              </div>
+              <div class="rcmNick">뚱</div>
+              <div class="rcmName">뚱이</div>
+              <button class="followBtn">팔로우</button>
+            </div>
+          </div>
+        </section>
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footHelp">
+            <li>Meta</li>
+            <li>소개</li>
+            <li>블로그</li>
+            <li>채용 정보</li>
+            <li>도움말</li>
+            <li>API</li>
+            <li>개인정보처리방침</li>
+            <li>약관</li>
+            <li>인기 계정</li>
+            <li>해시태그</li>
+            <li>위치</li>
+            <li>Instagram Lite</li>
+            <li>추천 계정</li>
+          </ul>
+          <div class="lang">
+            <div>한국어</div>
+            <div>Ⓒ 2022 Instagram from Meta</div>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

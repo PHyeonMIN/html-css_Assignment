@@ -1,0 +1,545 @@
+.board {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.board .boardOrder {
+  width: 100%;
+  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: 1px solid #dbdbdb;
+}
+
+.board .boardOrder .tab {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: normal;
+  font-size: 12px;
+  color: #262626;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.board .boardOrder .tab:not(:last-child) {
+  margin-right: 60px;
+}
+
+.board .boardOrder .tab span {
+  display: inline;
+  margin-left: 8px;
+}
+
+.board .boardOrder .tab.active {
+  border-top: 1px solid #262626;
+}
+
+.board .listItemContainer {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.board .listItemContainer .listItem {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 28px;
+}
+
+.board .listItemContainer .listItem .listImg {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox .imgInfo {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-weight: 600;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox .imgInfo .playCount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 20px;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox .imgInfo .playCount .playIcon {
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/instagramIcon.png");
+  background-position: -361px -333px;
+  margin-right: 8px;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox .imgInfo .commentCount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox .imgInfo .commentCount .commentIcon {
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/instagramIcon.png");
+  background-position: -382px -333px;
+  margin-right: 8px;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox:hover .imgInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.board .listItemContainer .listItem .listImg .innerBox:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.board .listItemContainer .listItem .listImg:not(:last-child) {
+  margin-right: 28px;
+}
+
+.board .listItemContainer .listItem:last-child {
+  margin-bottom: 0px;
+}
+
+.board .videoContainer {
+  display: none;
+}
+
+.board .modal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.board .modal.hidden {
+  display: none;
+}
+
+.board .modal .modalOverlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.board .modal .modalContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.board .modal .modalContent h2 {
+  z-index: 3;
+  font-family: normal;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.board .modal .modalContent .loginBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  margin: 20px;
+}
+
+.board .modal .modalContent .loginBox .closeIcon {
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/closeIcon.png");
+  background-size: 100%;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.board .modal .modalContent .loginBox .instaIcon {
+  width: 175px;
+  height: 51px;
+  background-image: url("../img/logo.png");
+  background-size: 100%;
+  margin-top: 50px;
+  margin-bottom: 18px;
+}
+
+.board .modal .modalContent .loginBox .formContainer {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.board .modal .modalContent .loginBox .formContainer .id,
+.board .modal .modalContent .loginBox .formContainer .pw {
+  width: auto;
+  height: 36px;
+  font-family: normal;
+  font-size: 12px;
+  color: #8e8e8e;
+  margin: 0 40px 6px;
+}
+
+.board .modal .modalContent .loginBox .formContainer .id input,
+.board .modal .modalContent .loginBox .formContainer .pw input {
+  width: 260px;
+  background-color: #fafafa;
+  border: 0;
+  overflow: hidden;
+  padding: 9px 0 7px 8px;
+  border: 1px solid #dbdbdb;
+}
+
+.board .modal .modalContent .loginBox .formContainer button {
+  width: 270px;
+  height: 30px;
+  background-color: rgba(var(--d69, 0, 149, 246), 0.3);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: normal;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  margin: 8px 40px;
+}
+
+.board .modal .modalContent .loginBox .orBox {
+  width: 100%;
+  height: auto;
+  font-family: normal;
+  font-size: 13px;
+  color: #8e8e8e;
+  font-weight: 600;
+  line-height: 15px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.board .modal .modalContent .loginBox .orBox::before {
+  content: "";
+  width: 104px;
+  height: 1px;
+  background-color: #dbdbdb;
+  position: absolute;
+  left: 66px;
+  top: 6px;
+}
+
+.board .modal .modalContent .loginBox .orBox::after {
+  content: "";
+  width: 104px;
+  height: 1px;
+  background-color: #dbdbdb;
+  position: absolute;
+  right: 66px;
+  bottom: 6px;
+}
+
+.board .modal .modalContent .loginBox .byFacebook {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: normal;
+  font-size: 14px;
+  color: #385185;
+  font-weight: 600;
+}
+
+.board .modal .modalContent .loginBox .byFacebook .facebookIcon {
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/facebookIcon.png");
+  background-size: 100%;
+  margin-right: 8px;
+}
+
+.board .modal .modalContent .loginBox .lostPassword {
+  text-align: center;
+  font-family: normal;
+  font-size: 12px;
+  color: #385185;
+  line-height: 16px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.board .modal .modalContent .loginBox .doJoin {
+  width: 100%;
+  height: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-family: normal;
+  font-size: 14px;
+  color: #262626;
+  text-align: center;
+  border-top: 1px solid #dbdbdb;
+  position: relative;
+}
+
+.board .modal .modalContent .loginBox .doJoin a {
+  font-family: normal;
+  font-size: 14px;
+  color: #0095f6;
+  font-weight: 600;
+}
+
+.board .modal .modalContent .loginBox .doJoin::after {
+  content: "";
+  width: 360px;
+  height: 1px;
+  background-color: #dbdbdb;
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+}
+
+@media screen and (max-width: 740px) {
+  .board .boardOrder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .board .boardOrder .tab {
+    cursor: pointer;
+  }
+  .board .boardOrder .tab img {
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+  }
+  .board .boardOrder .tab svg {
+    height: 24px;
+    width: 24px;
+  }
+  .board .boardOrder .tab span {
+    display: none;
+  }
+  .board .boardOrder .tab.active {
+    width: 28px;
+    height: 28px;
+    border: 0px;
+  }
+  .board .boardOrder .tab.active svg {
+    color: #0095f6;
+    fill: #0095f6;
+  }
+  .board .boardOrder .tab:not(:last-child) {
+    margin-right: 0px;
+  }
+  .board .listItemContainer .listItem {
+    margin-bottom: 2px;
+  }
+  .board .listItemContainer .listItem .listImg:not(:last-child) {
+    margin-right: 2px;
+  }
+  .board .listItemContainer .listItem .listImg .innerBox:hover .imgInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .board .listItemContainer .listItem .listImg .innerBox .imgInfo .playCount {
+    margin-right: 0px;
+  }
+}
