@@ -1,5 +1,5 @@
 # html/css-study
-## 현민이의 (주)여보야 첫 교육
+## 여보야 인턴기간 과제 : 2022-04-04 ~ 2022-04-20
 #### Assignment01
    2022-04-04 ~ 2022-04-06 : html/css + swiper API  
    피드백내용 : first_mainPage.css
